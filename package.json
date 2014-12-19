@@ -1,0 +1,11 @@
+{
+  "name": "wc-rube",
+  "version": "0.1.0",
+  "description": "minimalistic Web framework",
+  "main": "dist",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Suslov",
+  "license": "MIT"
+}
