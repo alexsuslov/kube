@@ -1,3 +1,18 @@
+- var pages =[{name:'Typography', href:'index'}];
+- pages.push({name:'Навигация', href:'navigation'});
+- pages.push({name:'Grid', href:'grid'});
+- pages.push({name:'Блоки', href:'blocks'});
+- pages.push({name:'Таблицы', href:'table'});
+- pages.push({name:'Формы', href:'forms'});
+- pages.push({name:'Label', href:'label'});
+- pages.push({name:'Кнопки', href:'button'});
+
+- pages.push({name:'Поиск', href:'search'});
+- pages.push({name:'Notifications', href:'notifications'});
+- pages.push({name:'Colors', href:'colors'});
+- pages.push({name:'Helpers', href:'helpers'});
+- pages.push({name:'Mixins', href:'mixins'});
+- pages.push({name:'Icons', href:'icons'});
 
 doctype html
 html.no-js
@@ -19,10 +34,11 @@ html.no-js
   body
     .units-row
       .unit-30
-        ul
-          each name in ['index','grids','blocks', 'label', 'table', 'form']
-            li
-              a(href='#{name}.html')= name
+        nav.nav.nav-stacked
+          ul
+            each page in pages
+              li
+                a(href='#{page.href}.html')= page.name
       .unit-70
         block content
           include ./tests/typography
