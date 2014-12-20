@@ -1,0 +1,26 @@
+extends ./index.jade
+block content
+  //- Test Labels
+  #Labels
+    h1 Labels And Badges
+
+    h2 Colors
+    span.label test
+    each label in ['black', 'blue', 'red', 'yellow', 'green', 'white']
+      hr
+      span.label(class='label-#{label}') Robe
+
+    h2 Labels Outline
+    each label in ['black', 'blue', 'red', 'yellow', 'green', 'white']
+      hr
+      span.label.label-outline(class='label-#{label}') Robe
+
+    h2 Badges Basic
+    each label, idx in ['black', 'blue', 'red', 'yellow', 'green', 'white']
+      hr
+      span.badge(class='badge-#{label}')= idx
+
+    h2 Badges Small
+    each label, idx in ['black', 'blue', 'red', 'yellow', 'green', 'white']
+      hr
+      span.badge.badge-small(class='badge-#{label}')= idx

@@ -1,0 +1,38 @@
+
+doctype html
+html.no-js
+  head
+    meta(charset='utf-8')
+    title wc robe
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width')
+    link(rel='shortcut icon', href='/favicon.ico')
+    // Place favicon.ico and apple-touch-icon.png in the root directory
+    // build:css(.) styles/vendor.css
+    // bower:css
+    // endbower
+    // endbuild
+    // build:css(.tmp) styles/main.css
+    link(rel='stylesheet', href='styles/wc-kube.css')
+    link(rel='stylesheet', href='styles/main.css')
+    // endbuild
+  body
+    .units-row
+      .unit-30
+        ul
+          each name in ['index','grids','blocks', 'label', 'table', 'form']
+            li
+              a(href='#{name}.html')= name
+      .unit-70
+        block content
+          include ./tests/typography
+
+    // build:js(.) scripts/vendor.js
+    // bower:js
+    script(src='bower_components/jquery/dist/jquery.js')
+    // endbower
+    // endbuild
+    // Google Analytics: change UA-XXXXX-X to be your site's ID.
+    // build:js({app,.tmp}) scripts/main.js
+    script(src='scripts/main.js')
+    // endbuild

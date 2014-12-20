@@ -1,4 +1,5 @@
-Kube Web Framework 4
+WC-Rube
+Based on Kube Web Framework 4
 ====
 
 Kube is a minimalistic Web framework for professional developers and designers.
