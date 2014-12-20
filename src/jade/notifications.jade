@@ -1,14 +1,18 @@
+include mixin/source
+
 extends ./index.jade
 block content
   #Notifications
     h1 Notifications
 
-    h2 Notify in style, any style
-    .tools-message
-      | Bender! Ship! Stop bickering or I'm going to come back there and change your opinions manually! Take me to your leader!
+    +source(' Notify in style, any style')
+      .tools-message
+        | Bender! Ship! Stop bickering or I'm going to come back there and
+        | change your opinions manually! Take me to your leader!
     hr
 
-    h2 Alerts
-    .tools-alert
-      | Bender! Ship! Stop bickering or I'm going to come back there and change your opinions manually! Take me to your leader!
-    hr
+    +source(' Alerts')
+      .tools-alert
+        | Bender! Ship! Stop bickering or I'm going to come back there and
+        | change your opinions manually! Take me to your leader!
+

@@ -15,6 +15,7 @@
     <!-- build:css(.tmp) styles/main.css-->
     <link rel="stylesheet" href="styles/wc-kube.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link href="bower_components/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css">
     <!-- endbuild-->
   </head>
   <body>
@@ -27,7 +28,7 @@
             <li><a href="grids.html">Grid</a></li>
             <li><a href="blocks.html">Блоки</a></li>
             <li><a href="table.html">Таблицы</a></li>
-            <li><a href="forms.html">Формы</a></li>
+            <li><a href="form.html">Формы</a></li>
             <li><a href="label.html">Label</a></li>
             <li><a href="button.html">Кнопки</a></li>
             <li><a href="search.html">Поиск</a></li>
@@ -43,271 +44,292 @@
         <div id="Tables">
           <h1>Tables</h1>
           <h2>Default Table</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Points</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Adam</td>
-                <td>Smith</td>
-                <td>50</td>
-              </tr>
-              <tr>
-                <td>Eve</td>
-                <td>Smith</td>
-                <td>94</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="2">Total points</td>
-                <td>223</td>
-              </tr>
-            </tfoot>
-          </table>
-          <hr>
-          <h2>Table Width</h2>
-          <table>
-            <thead>
-              <tr>
-                <th class="width-50">Head 1</th>
-                <th class="width-50">Head 2</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Col 1</td>
-                <td>Col 2</td>
-              </tr>
-            </tbody>
-          </table>
-          <hr>
-          <h2>Table Width</h2>
-          <table>
-            <thead>
-              <tr>
-                <th class="width-50">Head 1</th>
-                <th class="width-25">Head 2</th>
-                <th class="width-25">Head 3</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Col 1</td>
-                <td>Col 2</td>
-                <td>Col 3</td>
-              </tr>
-            </tbody>
-          </table>
-          <hr>
-          <h2>Table Caption</h2>
-          <table>
-            <caption>Caption</caption>
-            <thead>
-              <tr>
-                <th class="width-50">Head 1</th>
-                <th class="width-25">Head 2</th>
-                <th class="width-25">Head 3</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Col 1</td>
-                <td>Col 2</td>
-                <td>Col 3</td>
-              </tr>
-            </tbody>
-          </table>
-          <hr>
-          <h2>Bordered Table</h2>
-          <table class="table-bordered">
-            <thead>
-              <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Points</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Adam</td>
-                <td>Smith</td>
-                <td>50</td>
-              </tr>
-              <tr>
-                <td>Eve</td>
-                <td>Smith</td>
-                <td>94</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="2">Total points</td>
-                <td>223</td>
-              </tr>
-            </tfoot>
-          </table>
-          <hr>
-          <h2>Simple Table</h2>
-          <table class="table-simple">
-            <thead>
-              <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Points</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Adam</td>
-                <td>Smith</td>
-                <td>50</td>
-              </tr>
-              <tr>
-                <td>Eve</td>
-                <td>Smith</td>
-                <td>94</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="2">Total points</td>
-                <td>223</td>
-              </tr>
-            </tfoot>
-          </table>
-          <hr>
-          <h2>Flat Table</h2>
-          <table class="table-flat">
-            <thead>
-              <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Points</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Adam</td>
-                <td>Smith</td>
-                <td>50</td>
-              </tr>
-              <tr>
-                <td>Eve</td>
-                <td>Smith</td>
-                <td>94</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="2">Total points</td>
-                <td>223</td>
-              </tr>
-            </tfoot>
-          </table>
-          <hr>
-          <h2>Stripped Table</h2>
-          <table class="table-stripped">
-            <thead>
-              <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Points</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Adam</td>
-                <td>Smith</td>
-                <td>50</td>
-              </tr>
-              <tr>
-                <td>Eve</td>
-                <td>Smith</td>
-                <td>94</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="2">Total points</td>
-                <td>223</td>
-              </tr>
-            </tfoot>
-          </table>
-          <hr>
-          <h2>Hovered Table</h2>
-          <table class="table-hovered">
-            <thead>
-              <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Points</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Adam</td>
-                <td>Smith</td>
-                <td>50</td>
-              </tr>
-              <tr>
-                <td>Eve</td>
-                <td>Smith</td>
-                <td>94</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="2">Total points</td>
-                <td>223</td>
-              </tr>
-            </tfoot>
-          </table>
-          <hr>
-          <h2>Responsive Table</h2>
-          <div class="table-container">
+          <div class="wc-help">
             <table>
+              <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Points</th>
+                </tr>
+              </thead>
               <tbody>
                 <tr>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
+                  <td>Adam</td>
+                  <td>Smith</td>
+                  <td>50</td>
                 </tr>
                 <tr>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>Lorem ipsum dolor sit amet</td>
+                  <td>Eve</td>
+                  <td>Smith</td>
+                  <td>94</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2">Total points</td>
+                  <td>223</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <hr/>
+          <h2>Table Width</h2>
+          <div class="wc-help">
+            <table>
+              <thead>
+                <tr>
+                  <th class="width-50">Head 1</th>
+                  <th class="width-50">Head 2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Col 1</td>
+                  <td>Col 2</td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <hr/>
+          <h2>Table Width</h2>
+          <div class="wc-help">
+            <table>
+              <thead>
+                <tr>
+                  <th class="width-50">Head 1</th>
+                  <th class="width-25">Head 2</th>
+                  <th class="width-25">Head 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Col 1</td>
+                  <td>Col 2</td>
+                  <td>Col 3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr/>
+          <h2>Table Caption</h2>
+          <div class="wc-help">
+            <table>
+              <caption>Caption</caption>
+              <thead>
+                <tr>
+                  <th class="width-50">Head 1</th>
+                  <th class="width-25">Head 2</th>
+                  <th class="width-25">Head 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Col 1</td>
+                  <td>Col 2</td>
+                  <td>Col 3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr/>
+          <h2>Bordered Table</h2>
+          <div class="wc-help">
+            <table class="table-bordered">
+              <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Points</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Adam</td>
+                  <td>Smith</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>Eve</td>
+                  <td>Smith</td>
+                  <td>94</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2">Total points</td>
+                  <td>223</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <hr/>
+          <h2>Simple Table</h2>
+          <div class="wc-help">
+            <table class="table-simple">
+              <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Points</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Adam</td>
+                  <td>Smith</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>Eve</td>
+                  <td>Smith</td>
+                  <td>94</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2">Total points</td>
+                  <td>223</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <hr/>
+          <h2>Flat Table</h2>
+          <div class="wc-help">
+            <table class="table-flat">
+              <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Points</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Adam</td>
+                  <td>Smith</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>Eve</td>
+                  <td>Smith</td>
+                  <td>94</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2">Total points</td>
+                  <td>223</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <hr/>
+          <h2>Stripped Table</h2>
+          <div class="wc-help">
+            <table class="table-stripped">
+              <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Points</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Adam</td>
+                  <td>Smith</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>Eve</td>
+                  <td>Smith</td>
+                  <td>94</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2">Total points</td>
+                  <td>223</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <hr/>
+          <h2>Hovered Table</h2>
+          <div class="wc-help">
+            <table class="table-hovered">
+              <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Points</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Adam</td>
+                  <td>Smith</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>Eve</td>
+                  <td>Smith</td>
+                  <td>94</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2">Total points</td>
+                  <td>223</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <hr/>
+          <h2>Responsive Table</h2>
+          <div class="wc-help">
+            <div class="table-container">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                  </tr>
+                  <tr>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <hr/>
         </div>
       </div>
     </div>
@@ -316,9 +338,13 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower-->
     <!-- endbuild-->
+    <script src="bower_components/xregexp/min/xregexp-min.js"></script>
+    <script src="bower_components/SyntaxHighlighter/scripts/shCore.js"></script>
+    <script src="bower_components/SyntaxHighlighter/scripts/shBrushXml.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <!-- build:js({app,.tmp}) scripts/main.js-->
     <script src="scripts/main.js"></script>
     <!-- endbuild-->
+    
   </body>
 </html>

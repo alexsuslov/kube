@@ -1,6 +1,6 @@
 /* =Forms
 -----------------------------------------------------------------------------*/
-.forms  {
+.form  {
 	& .btn,
 	& input[type="submit"].btn,
 	& button,
@@ -17,7 +17,7 @@
 }
 
 
-.forms {
+.form {
 	& label {
 		display: block;
 		margin-bottom: @base-line / 1.5;
@@ -44,8 +44,8 @@
 		display: block;
 	}
 }
-.forms-inline,
-.forms-inline-list {
+.form-inline,
+.form-inline-list {
 	& input[type="text"],
 	& input[type="password"],
 	& input[type="email"],
@@ -68,31 +68,31 @@
 	}
 }
 
-.forms-list,
-.forms-inline,
-.forms-inline-list {
+.form-list,
+.form-inline,
+.form-inline-list {
 	margin: 0;
 	padding: 0;
 	margin-bottom: @base-line / 1.5;
 	list-style: none;
 }
-.forms-list label,
-.forms-inline label,
-.forms-inline-list li,
-.forms-inline-list li label {
+.form-list label,
+.form-inline label,
+.form-inline-list li,
+.form-inline-list li label {
 	display: inline-block;
 	margin-bottom: 0;
 }
-.forms-inline-list li label {
+.form-inline-list li label {
 	margin-right: @base-line / 2;
 }
-.forms-inline-list li {
+.form-inline-list li {
 	margin-bottom: 3px;
 }
-.forms-list li {
+.form-list li {
 	margin-bottom: 6px;
 }
-.forms-desc {
+.form-desc {
 	margin-top: 4px;
 	color: rgba(0, 0, 0, .4);
 	font-size: @font-size-small;
@@ -124,21 +124,49 @@ textarea {
 	font-weight: normal;
 	font-size: @font-size-small;
 }
+// Error states
+label.error{
+  select, textarea, input{
+    border-color: @color-red;
+    box-shadow: 0 0 0 2px rgba(red(@color-red), green(@color-red),
+      blue(@color-red), .3),0 1px 2px rgba(0, 0, 0, .2) inset;
+  }
+  p.success{
+    display: none;
+  }
+}
+// Success states
+label.success{
+  select, textarea, input{
+  border-color: @color-green;
+  box-shadow: 0 0 0 2px rgba(red(@color-green),
+    green(@color-green),
+    blue(@color-green), .3),0 1px 2px rgba(0, 0, 0, .2) inset;
+  }
+
+  p.error{
+    display: none;
+  }
+}
+
 input.input-error,
 textarea.input-error,
 select.input-error,
 .input-error {
 	border-color: @color-red;
-	box-shadow: 0 0 0 2px rgba(red(@color-red), green(@color-red), blue(@color-red), .3),0 1px 2px rgba(0, 0, 0, .2) inset;
+	box-shadow: 0 0 0 2px rgba(red(@color-red),
+    green(@color-red), blue(@color-red), .3),0 1px 2px rgba(0, 0, 0, .2) inset;
 }
+
 input.input-success,
 textarea.input-success,
 select.input-success,
 .input-success  {
 	border-color: @color-green;
-	box-shadow: 0 0 0 2px rgba(red(@color-green), green(@color-green), blue(@color-green), .3),0 1px 2px rgba(0, 0, 0, .2) inset;
-
+	box-shadow: 0 0 0 2px rgba(red(@color-green), green(@color-green),
+    blue(@color-green), .3),0 1px 2px rgba(0, 0, 0, .2) inset;
 }
+
 input.input-gray,
 textarea.input-gray,
 select.input-gray,

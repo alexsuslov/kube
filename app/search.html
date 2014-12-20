@@ -15,6 +15,7 @@
     <!-- build:css(.tmp) styles/main.css-->
     <link rel="stylesheet" href="styles/wc-kube.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link href="bower_components/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css">
     <!-- endbuild-->
   </head>
   <body>
@@ -27,7 +28,7 @@
             <li><a href="grids.html">Grid</a></li>
             <li><a href="blocks.html">Блоки</a></li>
             <li><a href="table.html">Таблицы</a></li>
-            <li><a href="forms.html">Формы</a></li>
+            <li><a href="form.html">Формы</a></li>
             <li><a href="label.html">Label</a></li>
             <li><a href="button.html">Кнопки</a></li>
             <li><a href="search.html">Поиск</a></li>
@@ -43,19 +44,30 @@
         <div id="Search">
           <h1>Search</h1>
           <h2>Lookup anything</h2>
-          <input type="search" placeholder="Search">
-          <hr>
-          <input type="text" placeholder="Search" class="input-search">
-          <hr>
-          <form action="" class="forms">
-            <div class="input-groups">
-              <input type="text" name="go" placeholder="Search"><span class="btn-append">
-                <button class="btn">Go</button></span>
-            </div>
-          </form>
-          <hr>
-          <input type="search" placeholder="Type to search..." class="input-on-black">
-          <hr>
+          <div class="wc-help">
+            <input type="search" placeholder="Search">
+          </div>
+          <hr/>
+          <h2>input-search</h2>
+          <div class="wc-help">
+            <input type="text" placeholder="Search" class="input-search">
+          </div>
+          <hr/>
+          <h2>search button</h2>
+          <div class="wc-help">
+            <form action="" class="forms">
+              <div class="input-groups">
+                <input type="text" name="go" placeholder="Search"><span class="btn-append">
+                  <button class="btn">Go</button></span>
+              </div>
+            </form>
+          </div>
+          <hr/>
+          <h2>search input-on-black</h2>
+          <div class="wc-help">
+            <input type="search" placeholder="Type to search..." class="input-on-black">
+          </div>
+          <hr/>
         </div>
       </div>
     </div>
@@ -64,9 +76,13 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower-->
     <!-- endbuild-->
+    <script src="bower_components/xregexp/min/xregexp-min.js"></script>
+    <script src="bower_components/SyntaxHighlighter/scripts/shCore.js"></script>
+    <script src="bower_components/SyntaxHighlighter/scripts/shBrushXml.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <!-- build:js({app,.tmp}) scripts/main.js-->
     <script src="scripts/main.js"></script>
     <!-- endbuild-->
+    
   </body>
 </html>

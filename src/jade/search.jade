@@ -1,18 +1,23 @@
+include mixin/source
+
 extends ./index.jade
 block content
   #Search
     h1 Search
 
-    h2 Lookup anything
-    input(type='search', placeholder='Search')
-    hr
-    input.input-search(type='text', placeholder='Search')
-    hr
-    form.forms(action='')
-      .input-groups
-        input(type='text', name='go', placeholder='Search')
-        span.btn-append
-          button.btn Go
-    hr
-    input.input-on-black(type='search', placeholder='Type to search...')
-    hr
+    +source('Lookup anything')
+      input(type='search', placeholder='Search')
+
+    +source('input-search')
+      input.input-search(type='text', placeholder='Search')
+
+    +source('search button')
+      form.forms(action='')
+        .input-groups
+          input(type='text', name='go', placeholder='Search')
+          span.btn-append
+            button.btn Go
+
+    +source('search input-on-black')
+      input.input-on-black(type='search', placeholder='Type to search...')
+

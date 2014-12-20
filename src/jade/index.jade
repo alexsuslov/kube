@@ -1,18 +1,4 @@
-- var pages =[{name:'Typography', href:'index'}];
-- pages.push({name:'Навигация', href:'navigation'});
-- pages.push({name:'Grid', href:'grids'});
-- pages.push({name:'Блоки', href:'blocks'});
-- pages.push({name:'Таблицы', href:'table'});
-- pages.push({name:'Формы', href:'forms'});
-- pages.push({name:'Label', href:'label'});
-- pages.push({name:'Кнопки', href:'button'});
-
-- pages.push({name:'Поиск', href:'search'});
-- pages.push({name:'Notifications', href:'notifications'});
-- pages.push({name:'Colors', href:'colors'});
-- pages.push({name:'Helpers', href:'helpers'});
-- pages.push({name:'Mixins', href:'mixins'});
-- pages.push({name:'Icons', href:'icons'});
+include mixin/nav
 
 doctype html
 html.no-js
@@ -31,15 +17,13 @@ html.no-js
     // build:css(.tmp) styles/main.css
     link(rel='stylesheet', href='styles/wc-kube.css')
     link(rel='stylesheet', href='styles/main.css')
+    link(href="bower_components/SyntaxHighlighter/styles/shCore.css",rel="stylesheet",type="text/css")
     // endbuild
   body
     .units-row
       .unit-30
-        nav.nav.nav-stacked
-          ul
-            each page in pages
-              li
-                a(href='#{page.href}.html')= page.name
+        block nav
+          +leftNav()
       .unit-70
         block content
           include ./tests/typography
@@ -49,7 +33,14 @@ html.no-js
     script(src='bower_components/jquery/dist/jquery.js')
     // endbower
     // endbuild
+    script(src='bower_components/xregexp/min/xregexp-min.js')
+    script(src='bower_components/SyntaxHighlighter/scripts/shCore.js')
+    script(src='bower_components/SyntaxHighlighter/scripts/shBrushXml.js')
+
+
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     // build:js({app,.tmp}) scripts/main.js
     script(src='scripts/main.js')
     // endbuild
+
+

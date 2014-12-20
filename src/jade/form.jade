@@ -1,83 +1,82 @@
+include mixin/source
+
 extends ./index.jade
 block content
   //- Test Form
   #Form
     h1 Forms
-    //- @todo: переделать .forms на .form
-    form.forms(method="post", action="#", class="forms")
-      label Email
-      input.width-50( type="email", name="user-email")
-      label Password
-      input.width-50( type="password", name="user-password")
-      p
-        button.btn.btn-blue Log in
-        button.btn Cancel
-    hr
-    form.forms(method="post", action="#", class="forms")
-      label
-        input.width-50(
-          type="email",
-          name="user-email",
-          placeholder="Email")
-      label
-        input.width-50( type="password", name="user-password", placeholder="Password")
-      p
-        button.width-50.btn.btn-blue Log in
+    +source('Форма')
+      form.form(method="post", action="#", class="forms")
+        label Email
+          input.width-50( type="email", name="user-email")
+        label Password
+          input.width-50( type="password", name="user-password")
+        p
+          button.btn.btn-blue Log in
+          button.btn Cancel
+    +source('Простая форма')
+      form.form(method="post", action="#", class="forms")
+        label
+          input.width-50(
+            type="email",
+            name="user-email",
+            placeholder="Email")
+        label
+          input.width-50( type="password", name="user-password", placeholder="Password")
+        p
+          button.width-50.btn.btn-blue Log in
 
     //- @bug: Label меняет размер
     //- @todo: Input сделать индикатор состояния и индикацию подписи
     //- if label.success span.success
     //- if label.error span.error
     //- @todo: сделать цвет input по class label
-    hr
-    h2 Input states
-    form.forms(method='post', action='')
-      label.error Error
-        input.width-40(type='text', name='state')
-        p.error Error
-        p.saccess Success
+    +source('Input states')
+      form.form(method='post', action='')
+        label.error Error
+          input.width-40(type='text', name='state')
+          p.error Error
+          p.success Success
 
-      label.success Success
-        input.width-40(type='text', name='state')
-        p.error Error
-        p.success Success
+        label.success Success
+          input.width-40(type='text', name='state')
+          p.error Error
+          p.success Success
 
-      label Gray
-        input.input-gray.width-40(type='text', name='state-gray')
+        label Gray
+          input.input-gray.width-40(type='text', name='state-gray')
 
-    hr
-    h2 Required
-    form.forms(method='post', action='')
-      label Email
-        span.req *
-        input.width-50(type='email', name='user-email')
+    +source('Required')
+      form.form(method='post', action='')
+        label Email
+          span.req *
+          input.width-50(type='email', name='user-email')
 
-    hr
-    h2 Input Sizes
-    h3 Big
-    form.forms.forms-inline
-      input.input-big.width-50(type='text', placeholder='Title')
-      button.btn.btn-big Big
 
-    h3 Normal
-    form.forms.forms-inline
-      input.width-50(type='text', placeholder='Title')
-      button.btn Normal
+    +source('Input Sizes Big')
+      form.form.form-inline
+        input.input-big.width-50(type='text', placeholder='Title')
+        button.btn.btn-big Big
 
-    h3 Smaller
-    form.forms.forms-inline
-      input.width-50.input-smaller(type='text', placeholder='Title')
-      button.btn.btn-smaller Smaller
+    +source('Input Sizes Normal')
+      form.form.form-inline
+        input.width-50(type='text', placeholder='Title')
+        button.btn Normal
 
-    h2 Input Descriptions
-    form.forms(method='post', action='')
-      label Name
-        input.width-50(type='text', name='user-name')
-        span.forms-desc Always nice to feel important.
+    +source('Input Sizes Smaller')
+      form.form.form-inline
+        input.width-50.input-smaller(type='text', placeholder='Title')
+        button.btn.btn-smaller Smaller
 
-      label Email
-        input.width-50(type='email', name='user-email')
-        .forms-desc Please enter your email.
+    +source('Input Descriptions')
+      form.form(method='post', action='')
+        label Name
+          input.width-50(type='text', name='user-name')
+          span.form-desc Always nice to feel important.
+
+        label Email
+          input.width-50(type='email', name='user-email')
+          .forms-desc Please enter your email.
 
 
 

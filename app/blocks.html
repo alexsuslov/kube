@@ -15,6 +15,7 @@
     <!-- build:css(.tmp) styles/main.css-->
     <link rel="stylesheet" href="styles/wc-kube.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link href="bower_components/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css">
     <!-- endbuild-->
   </head>
   <body>
@@ -27,7 +28,7 @@
             <li><a href="grids.html">Grid</a></li>
             <li><a href="blocks.html">Блоки</a></li>
             <li><a href="table.html">Таблицы</a></li>
-            <li><a href="forms.html">Формы</a></li>
+            <li><a href="form.html">Формы</a></li>
             <li><a href="label.html">Label</a></li>
             <li><a href="button.html">Кнопки</a></li>
             <li><a href="search.html">Поиск</a></li>
@@ -40,71 +41,89 @@
         </nav>
       </div>
       <div class="unit-70">
-        <div id="Grid">
+        <div id="Blocks">
           <h0>Blocks</h0>
-          <hr>
           <h2>Two</h2>
-          <ul class="blocks-2">
-            <li>50%</li>
-            <li>50%</li>
-          </ul>
-          <hr>
+          <div class="wc-help">
+            <ul class="blocks-2">
+              <li class="visualiser">50%</li>
+              <li class="visualiser">50%</li>
+            </ul>
+          </div>
+          <hr/>
           <h2>Three</h2>
-          <ul class="blocks-3">
-            <li>33%</li>
-            <li>33%</li>
-            <li>33%</li>
-          </ul>
-          <hr>
+          <div class="wc-help">
+            <ul class="blocks-3">
+              <li class="visualiser">33%</li>
+              <li class="visualiser">33%</li>
+              <li class="visualiser">33%</li>
+            </ul>
+          </div>
+          <hr/>
           <h2>Four</h2>
-          <ul class="blocks-4">
-            <li>25%</li>
-            <li>25%</li>
-            <li>25%</li>
-            <li>25%</li>
-          </ul>
-          <hr>
+          <div class="wc-help">
+            <ul class="blocks-4">
+              <li class="visualiser">25%</li>
+              <li class="visualiser">25%</li>
+              <li class="visualiser">25%</li>
+              <li class="visualiser">25%</li>
+            </ul>
+          </div>
+          <hr/>
           <h2>Five</h2>
-          <ul class="blocks-5">
-            <li>20%</li>
-            <li>20%</li>
-            <li>20%</li>
-            <li>20%</li>
-            <li>20%</li>
-          </ul>
-          <hr>
+          <div class="wc-help">
+            <ul class="blocks-5">
+              <li class="visualiser">20%</li>
+              <li class="visualiser">20%</li>
+              <li class="visualiser">20%</li>
+              <li class="visualiser">20%</li>
+              <li class="visualiser">20%</li>
+            </ul>
+          </div>
+          <hr/>
           <h2>Six</h2>
-          <ul class="blocks-6">
-            <li>16.6%</li>
-            <li>16.6%</li>
-            <li>16.6%</li>
-            <li>16.6%</li>
-            <li>16.6%</li>
-            <li>16.6%</li>
-          </ul>
-          <hr>
+          <div class="wc-help">
+            <ul class="blocks-6">
+              <li class="visualiser">16.6%</li>
+              <li class="visualiser">16.6%</li>
+              <li class="visualiser">16.6%</li>
+              <li class="visualiser">16.6%</li>
+              <li class="visualiser">16.6%</li>
+              <li class="visualiser">16.6%</li>
+            </ul>
+          </div>
+          <hr/>
           <h2>Different Sizes</h2>
-          <ul class="blocks-5">
-            <li>20%</li>
-            <li>20%</li>
-            <li style="padding: 50px;">20%</li>
-            <li>20%</li>
-            <li>20%</li>
-          </ul>
-          <hr>
+          <div class="wc-help">
+            <ul class="blocks-5">
+              <li class="visualiser">20%</li>
+              <li class="visualiser">20%</li>
+              <li style="padding: 50px;" class="visualiser">20%</li>
+              <li class="visualiser">20%</li>
+              <li class="visualiser">20%</li>
+            </ul>
+          </div>
+          <hr/>
           <h2>Mobile Helpers</h2>
-          <ul class="blocks-5 blocks-mobile-33">
-            <li>20%</li>
-            <li>20%</li>
-            <li>20%</li>
-            <li>20%</li>
-            <li>20%</li>
-          </ul>
-          <ul class="blocks-3 blocks-mobile-50">
-            <li>33%</li>
-            <li>33%</li>
-            <li>33%</li>
-          </ul>
+          <div class="wc-help">
+            <ul class="blocks-5 blocks-mobile-33">
+              <li class="visualiser">20%</li>
+              <li class="visualiser">20%</li>
+              <li class="visualiser">20%</li>
+              <li class="visualiser">20%</li>
+              <li class="visualiser">20%</li>
+            </ul>
+          </div>
+          <hr/>
+          <h2>Mobile Helpers 1</h2>
+          <div class="wc-help">
+            <ul class="blocks-3 blocks-mobile-50">
+              <li class="visualiser">33%</li>
+              <li class="visualiser">33%</li>
+              <li class="visualiser">33%</li>
+            </ul>
+          </div>
+          <hr/>
         </div>
       </div>
     </div>
@@ -113,9 +132,13 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower-->
     <!-- endbuild-->
+    <script src="bower_components/xregexp/min/xregexp-min.js"></script>
+    <script src="bower_components/SyntaxHighlighter/scripts/shCore.js"></script>
+    <script src="bower_components/SyntaxHighlighter/scripts/shBrushXml.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <!-- build:js({app,.tmp}) scripts/main.js-->
     <script src="scripts/main.js"></script>
     <!-- endbuild-->
+    
   </body>
 </html>

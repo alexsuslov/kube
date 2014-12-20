@@ -1,0 +1,26 @@
+mixin mainMav()
+  - var main =[{name:'css', href:'css'}];
+  - main.push({name:'js', href:'js'});
+
+mixin leftNav(name)
+  - var pages =[{name:'Typography', href:'index'}];
+  - pages.push({name:'Навигация', href:'navigation'});
+  - pages.push({name:'Grid', href:'grids'});
+  - pages.push({name:'Блоки', href:'blocks'});
+  - pages.push({name:'Таблицы', href:'table'});
+  - pages.push({name:'Формы', href:'form'});
+  - pages.push({name:'Label', href:'label'});
+  - pages.push({name:'Кнопки', href:'button'});
+
+  - pages.push({name:'Поиск', href:'search'});
+  - pages.push({name:'Notifications', href:'notifications'});
+  - pages.push({name:'Colors', href:'colors'});
+  - pages.push({name:'Helpers', href:'helpers'});
+  - pages.push({name:'Mixins', href:'mixins'});
+  - pages.push({name:'Icons', href:'icons'});
+
+  nav.nav.nav-stacked
+    ul
+      each page in pages
+        li
+          a(href='#{page.href}.html')= page.name

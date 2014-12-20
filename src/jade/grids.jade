@@ -1,15 +1,18 @@
+include mixin/source
+mixin unit(unit)
+  div.visualiser(class='unit-#{unit}')= unit+ '%'
 extends ./index.jade
 block content
   //- Test Grids
   #Grid
     h0 Grid
     h2 Start
-    .units-row
-      .unit-50 Hello world
-      .unit-50 It's wc Robe Grid System
-    hr
-    h2 Units
+    +source('Start')
+      .units-row
+        .unit-50.visualiser Hello world
+        .unit-50.visualiser It's wc Robe Grid System
 
+    h2 Units
     - var grids = [];
     - grids.push([100]);
     - grids.push([50,50]);
@@ -25,48 +28,48 @@ block content
     each units in grids
       .units-row
         each unit in units
-          div(class='unit-#{unit}')= unit+ '%'
+          +unit(unit)
     hr
-    h2 Split units
-    - var splitGrids = [];
-    - splitGrids.push([40,60]);
+    +source('Split units')
+      - var splitGrids = [];
+      - splitGrids.push([40,60]);
 
-    each units in splitGrids
-      .units-row.units-split
-        each unit in units
-          div(class='unit-#{unit}')= unit+ '%'
+      each units in splitGrids
+        .units-row.units-split
+          each unit in units
+            +unit(unit)
     hr
     h2 Nested units
     .units-row
       .unit-50
         .units-row.end
-          .unit-20 20%
-          .unit-80 80%
+          .unit-20.visualiser 20%
+          .unit-80.visualiser 80%
         .units-row.end
-          .unit-70 70%
-          .unit-30 30%
+          .unit-70.visualiser 70%
+          .unit-30.visualiser 30%
       .unit-50
         .units-row.end
-          .unit-25 25%
-          .unit-25 25%
-          .unit-25 25%
-          .unit-25 25%
+          .unit-25.visualiser 25%
+          .unit-25.visualiser 25%
+          .unit-25.visualiser 25%
+          .unit-25.visualiser 25%
         .units-row.end
-          .unit-20 20%
-          .unit-20 20%
-          .unit-20 20%
-          .unit-20 20%
-          .unit-20 20%
+          .unit-20.visualiser 20%
+          .unit-20.visualiser 20%
+          .unit-20.visualiser 20%
+          .unit-20.visualiser 20%
+          .unit-20.visualiser 20%
     hr
     h2 Centered
       .units-row
-        .unit-centered.unit-40 40%
+        .unit-centered.unit-40.visualiser 40%
 
     hr
     h2 Push by unit
       .units-row
-        .unit-push-50.unit-2 20%
+        .unit-push-50.unit-20.visualiser 20%
 
       .units-row
-        .unit-push-20.unit-80 80%
+        .unit-push-20.unit-80.visualiser 80%
 

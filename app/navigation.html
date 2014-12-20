@@ -15,6 +15,7 @@
     <!-- build:css(.tmp) styles/main.css-->
     <link rel="stylesheet" href="styles/wc-kube.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link href="bower_components/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css">
     <!-- endbuild-->
   </head>
   <body>
@@ -27,7 +28,7 @@
             <li><a href="grids.html">Grid</a></li>
             <li><a href="blocks.html">Блоки</a></li>
             <li><a href="table.html">Таблицы</a></li>
-            <li><a href="forms.html">Формы</a></li>
+            <li><a href="form.html">Формы</a></li>
             <li><a href="label.html">Label</a></li>
             <li><a href="button.html">Кнопки</a></li>
             <li><a href="search.html">Поиск</a></li>
@@ -44,43 +45,38 @@
           <h1>Navigation</h1>
           <hr>
           <h2>Navbar</h2>
-          <nav class="navbar">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li class="active"><a href="#">About</a></li>
-              <li><a href="#">Showcase</a></li>
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
+          <div class="wc-help">
+            <nav class="navbar">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li class="active"><a href="#">About</a></li>
+                <li><a href="#">Showcase</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <hr/>
           <h3>Navbar Examples</h3>
           <hr>
           <h2>Navbar Fullwidth</h2>
-          <nav class="navbar nav-fullwidth">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li class="active"><a href="#">About</a></li>
-              <li><a href="#">Showcase</a></li>
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
+          <div class="wc-help">
+            <nav class="navbar nav-fullwidth">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li class="active"><a href="#">About</a></li>
+                <li><a href="#">Showcase</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <hr/>
           <h3>Navbar Fullwidth Examples</h3>
           <hr>
           <h2>Pills</h2>
-          <nav class="navbar navbar-pills">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li class="active"><a href="#">About</a></li>
-              <li><a href="#">Showcase</a></li>
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-          <hr>
-          <h2>Left & Right Navbars</h2>
-          <header class="group">
-            <nav class="navbar navbar-left">
+          <div class="wc-help">
+            <nav class="navbar navbar-pills">
               <ul>
                 <li><a href="#">Home</a></li>
                 <li class="active"><a href="#">About</a></li>
@@ -89,11 +85,44 @@
                 <li><a href="#">Contact</a></li>
               </ul>
             </nav>
-          </header>
-          <hr>
+          </div>
+          <hr/>
+          <h2>Left &amp; Right Navbars</h2>
+          <div class="wc-help">
+            <header class="group">
+              <nav class="navbar navbar-left">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li class="active"><a href="#">About</a></li>
+                  <li><a href="#">Showcase</a></li>
+                  <li><a href="#">Help</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </header>
+          </div>
+          <hr/>
           <h2>Navbar Form</h2>
-          <header class="group">
-            <nav class="navbar navbar-left">
+          <div class="wc-help">
+            <header class="group">
+              <nav class="navbar navbar-left">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li class="active"><a href="#">About</a></li>
+                  <li><a href="#">Showcase</a></li>
+                  <li><a href="#">Help</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+              <form action="" class="right width-30">
+                <input type="text" placeholder="Search" class="input-search input-search-icon width-100">
+              </form>
+            </header>
+          </div>
+          <hr/>
+          <h2>Vertical Navigation</h2>
+          <div class="wc-help">
+            <nav class="nav">
               <ul>
                 <li><a href="#">Home</a></li>
                 <li class="active"><a href="#">About</a></li>
@@ -102,103 +131,111 @@
                 <li><a href="#">Contact</a></li>
               </ul>
             </nav>
-            <form action="" class="right width-30">
-              <input type="text" placeholder="Search" class="input-search input-search-icon width-100">
-            </form>
-          </header>
-          <hr>
-          <h2>Vertical Navigation</h2>
-          <nav class="nav">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li class="active"><a href="#">About</a></li>
-              <li><a href="#">Showcase</a></li>
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-          <hr>
+          </div>
+          <hr/>
           <h2>Vertical Navigation with Nested Items</h2>
           <hr>
           <h2>Stacked</h2>
-          <nav class="nav nav-stacked">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li class="active"><a href="#">About</a></li>
-              <li><a href="#">Showcase</a></li>
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-          <hrhr></hrhr>
+          <div class="wc-help">
+            <nav class="nav nav-stacked">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li class="active"><a href="#">About</a></li>
+                <li><a href="#">Showcase</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <hr/>
           <h2>Stats</h2>
-          <nav class="nav nav-stats">
-            <ul>
-              <li><a href="#">Home</a><sup>1</sup></li>
-              <li class="active"><a href="#">About</a><sup>2</sup></li>
-              <li><a href="#">Showcase</a><sup>3</sup></li>
-              <li><a href="#">Help</a><sup>4</sup></li>
-              <li><a href="#">Contact</a><sup>5</sup></li>
-            </ul>
-          </nav>
-          <hr>
-          <nav class="nav nav-stats">
-            <ul>
-              <li><a href="#">Home</a><b class="badge badge-small">1</b></li>
-              <li class="active"><a href="#">About</a><b class="badge badge-small">2</b></li>
-              <li><a href="#">Showcase</a><b class="badge badge-small">3</b></li>
-              <li><a href="#">Help</a><b class="badge badge-small">4</b></li>
-              <li><a href="#">Contact</a><b class="badge badge-small">5</b></li>
-            </ul>
-          </nav>
+          <div class="wc-help">
+            <nav class="nav nav-stats">
+              <ul>
+                <li><a href="#">Home</a><sup>1</sup></li>
+                <li class="active"><a href="#">About</a><sup>2</sup></li>
+                <li><a href="#">Showcase</a><sup>3</sup></li>
+                <li><a href="#">Help</a><sup>4</sup></li>
+                <li><a href="#">Contact</a><sup>5</sup></li>
+              </ul>
+            </nav>
+          </div>
+          <hr/>
+          <h2>Stats badge</h2>
+          <div class="wc-help">
+            <nav class="nav nav-stats">
+              <ul>
+                <li><a href="#">Home</a><b class="badge badge-small">1</b></li>
+                <li class="active"><a href="#">About</a><b class="badge badge-small">2</b></li>
+                <li><a href="#">Showcase</a><b class="badge badge-small">3</b></li>
+                <li><a href="#">Help</a><b class="badge badge-small">4</b></li>
+                <li><a href="#">Contact</a><b class="badge badge-small">5</b></li>
+              </ul>
+            </nav>
+          </div>
+          <hr/>
           <hr>
           <h2>Tabs</h2>
-          <nav class="nav-tabs">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li class="active"><a href="#">About</a></li>
-              <li><a href="#">Showcase</a></li>
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-          <hr>
+          <div class="wc-help">
+            <nav class="nav-tabs">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li class="active"><a href="#">About</a></li>
+                <li><a href="#">Showcase</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <hr/>
           <h2>Breadcrumbs</h2>
-          <nav class="breadcrumbs">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li class="active"><a href="#">About</a></li>
-              <li><a href="#">Showcase</a></li>
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-          <nav class="breadcrumbs breadcrumbs-path">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li class="active"><a href="#">About</a></li>
-              <li><a href="#">Showcase</a></li>
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-          <hr>
+          <div class="wc-help">
+            <nav class="breadcrumbs">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li class="active"><a href="#">About</a></li>
+                <li><a href="#">Showcase</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <hr/>
+          <h2>Breadcrumbs path</h2>
+          <div class="wc-help">
+            <nav class="breadcrumbs breadcrumbs-path">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li class="active"><a href="#">About</a></li>
+                <li><a href="#">Showcase</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <hr/>
           <h2>Pagination</h2>
-          <ul class="pagination">
-            <li><a href="#">&larr;</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><span>5</span></li>
-            <li><a href="#">&rarr;</a></li>
-          </ul>
-          <ul class="pagination">
-            <li><a href="#">&larr;</a></li>
-            <li><span>2 of 10</span></li>
-            <li><a href="#">&rarr;</a></li>
-          </ul>
-          <hr>
+          <div class="wc-help">
+            <ul class="pagination">
+              <li><a href="#">&larr;</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><span>5</span></li>
+              <li><a href="#">&rarr;</a></li>
+            </ul>
+          </div>
+          <hr/>
+          <h2>Pagination 1</h2>
+          <div class="wc-help">
+            <ul class="pagination">
+              <li><a href="#">&larr;</a></li>
+              <li><span>2 of 10</span></li>
+              <li><a href="#">&rarr;</a></li>
+            </ul>
+          </div>
+          <hr/>
         </div>
       </div>
     </div>
@@ -207,9 +244,13 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower-->
     <!-- endbuild-->
+    <script src="bower_components/xregexp/min/xregexp-min.js"></script>
+    <script src="bower_components/SyntaxHighlighter/scripts/shCore.js"></script>
+    <script src="bower_components/SyntaxHighlighter/scripts/shBrushXml.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <!-- build:js({app,.tmp}) scripts/main.js-->
     <script src="scripts/main.js"></script>
     <!-- endbuild-->
+    
   </body>
 </html>

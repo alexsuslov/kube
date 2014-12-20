@@ -15,6 +15,7 @@
     <!-- build:css(.tmp) styles/main.css-->
     <link rel="stylesheet" href="styles/wc-kube.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link href="bower_components/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css">
     <!-- endbuild-->
   </head>
   <body>
@@ -27,7 +28,7 @@
             <li><a href="grids.html">Grid</a></li>
             <li><a href="blocks.html">Блоки</a></li>
             <li><a href="table.html">Таблицы</a></li>
-            <li><a href="forms.html">Формы</a></li>
+            <li><a href="form.html">Формы</a></li>
             <li><a href="label.html">Label</a></li>
             <li><a href="button.html">Кнопки</a></li>
             <li><a href="search.html">Поиск</a></li>
@@ -42,79 +43,102 @@
       <div class="unit-70">
         <div id="Form">
           <h1>Forms</h1>
-          <form method="post" action="#" class="forms forms">
-            <label>Email</label>
-            <input type="email" name="user-email" class="width-50">
-            <label>Password</label>
-            <input type="password" name="user-password" class="width-50">
-            <p>
-              <button class="btn btn-blue">Log in</button>
-              <button class="btn">Cancel</button>
-            </p>
-          </form>
-          <hr>
-          <form method="post" action="#" class="forms forms">
-            <label>
-              <input type="email" name="user-email" placeholder="Email" class="width-50">
-            </label>
-            <label>
-              <input type="password" name="user-password" placeholder="Password" class="width-50">
-            </label>
-            <p>
-              <button class="width-50 btn btn-blue">Log in</button>
-            </p>
-          </form>
-          <hr>
+          <h2>Форма</h2>
+          <div class="wc-help">
+            <form method="post" action="#" class="form forms">
+              <label>Email
+                <input type="email" name="user-email" class="width-50">
+              </label>
+              <label>Password
+                <input type="password" name="user-password" class="width-50">
+              </label>
+              <p>
+                <button class="btn btn-blue">Log in</button>
+                <button class="btn">Cancel</button>
+              </p>
+            </form>
+          </div>
+          <hr/>
+          <h2>Простая форма</h2>
+          <div class="wc-help">
+            <form method="post" action="#" class="form forms">
+              <label>
+                <input type="email" name="user-email" placeholder="Email" class="width-50">
+              </label>
+              <label>
+                <input type="password" name="user-password" placeholder="Password" class="width-50">
+              </label>
+              <p>
+                <button class="width-50 btn btn-blue">Log in</button>
+              </p>
+            </form>
+          </div>
+          <hr/>
           <h2>Input states</h2>
-          <form method="post" action="" class="forms">
-            <label class="error">Error
-              <input type="text" name="state" class="width-40">
-              <p class="error">Error</p>
-              <p class="saccess">Success</p>
-            </label>
-            <label class="success">Success
-              <input type="text" name="state" class="width-40">
-              <p class="error">Error</p>
-              <p class="success">Success</p>
-            </label>
-            <label>Gray
-              <input type="text" name="state-gray" class="input-gray width-40">
-            </label>
-          </form>
-          <hr>
+          <div class="wc-help">
+            <form method="post" action="" class="form">
+              <label class="error">Error
+                <input type="text" name="state" class="width-40">
+                <p class="error">Error</p>
+                <p class="success">Success</p>
+              </label>
+              <label class="success">Success
+                <input type="text" name="state" class="width-40">
+                <p class="error">Error</p>
+                <p class="success">Success</p>
+              </label>
+              <label>Gray
+                <input type="text" name="state-gray" class="input-gray width-40">
+              </label>
+            </form>
+          </div>
+          <hr/>
           <h2>Required</h2>
-          <form method="post" action="" class="forms">
-            <label>Email<span class="req">*</span>
-              <input type="email" name="user-email" class="width-50">
-            </label>
-          </form>
-          <hr>
-          <h2>Input Sizes</h2>
-          <h3>Big</h3>
-          <form class="forms forms-inline">
-            <input type="text" placeholder="Title" class="input-big width-50">
-            <button class="btn btn-big">Big</button>
-          </form>
-          <h3>Normal</h3>
-          <form class="forms forms-inline">
-            <input type="text" placeholder="Title" class="width-50">
-            <button class="btn">Normal</button>
-          </form>
-          <h3>Smaller</h3>
-          <form class="forms forms-inline">
-            <input type="text" placeholder="Title" class="width-50 input-smaller">
-            <button class="btn btn-smaller">Smaller</button>
-          </form>
+          <div class="wc-help">
+            <form method="post" action="" class="form">
+              <label>Email<span class="req">*</span>
+                <input type="email" name="user-email" class="width-50">
+              </label>
+            </form>
+          </div>
+          <hr/>
+          <h2>Input Sizes Big</h2>
+          <div class="wc-help">
+            <form class="form form-inline">
+              <input type="text" placeholder="Title" class="input-big width-50">
+              <button class="btn btn-big">Big</button>
+            </form>
+          </div>
+          <hr/>
+          <h2>Input Sizes Normal</h2>
+          <div class="wc-help">
+            <form class="form form-inline">
+              <input type="text" placeholder="Title" class="width-50">
+              <button class="btn">Normal</button>
+            </form>
+          </div>
+          <hr/>
+          <h2>Input Sizes Smaller</h2>
+          <div class="wc-help">
+            <form class="form form-inline">
+              <input type="text" placeholder="Title" class="width-50 input-smaller">
+              <button class="btn btn-smaller">Smaller</button>
+            </form>
+          </div>
+          <hr/>
           <h2>Input Descriptions</h2>
-          <form method="post" action="" class="forms">
-            <label>Name
-              <input type="text" name="user-name" class="width-50"><span class="forms-desc">Always nice to feel important.</span>
-            </label>
-            <label>Email
-              <input type="email" name="user-email" class="width-50">
-              <div class="forms-desc">Please enter your email.</div>
-            </label>
-          </form>
+          <div class="wc-help">
+            <form method="post" action="" class="form">
+              <label>Name
+                <input type="text" name="user-name" class="width-50"><span class="form-desc">Always nice to feel important.</span>
+              </label>
+              <label>Email
+                <input type="email" name="user-email" class="width-50">
+                <div class="forms-desc">Please enter your email.</div>
+              </label>
+            </form>
+          </div>
+          <hr/>
         </div>
       </div>
     </div>
@@ -123,9 +147,13 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower-->
     <!-- endbuild-->
+    <script src="bower_components/xregexp/min/xregexp-min.js"></script>
+    <script src="bower_components/SyntaxHighlighter/scripts/shCore.js"></script>
+    <script src="bower_components/SyntaxHighlighter/scripts/shBrushXml.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <!-- build:js({app,.tmp}) scripts/main.js-->
     <script src="scripts/main.js"></script>
     <!-- endbuild-->
+    
   </body>
 </html>

@@ -1,138 +1,142 @@
+include mixin/source
 extends ./index.jade
 block content
   //- Test Labels
   #navigation
     h1 Navigation
     hr
-    h2 Navbar
-    nav.navbar
-      ul
-        - var navbar = [];
-        - navbar.push({stat:'1',cls:'',name : 'Home'});
-        - navbar.push({stat:'2',cls:'active',name : 'About'});
-        - navbar.push({stat:'3',cls:'',name : 'Showcase'});
-        - navbar.push({stat:'4',cls:'',name : 'Help'});
-        - navbar.push({stat:'5',cls:'',name : 'Contact'});
+    - var navbar = [];
+    - navbar.push({stat:'1',cls:'',name : 'Home'});
+    - navbar.push({stat:'2',cls:'active',name : 'About'});
+    - navbar.push({stat:'3',cls:'',name : 'Showcase'});
+    - navbar.push({stat:'4',cls:'',name : 'Help'});
+    - navbar.push({stat:'5',cls:'',name : 'Contact'});
 
-        each nav in navbar
-          li(class=nav.cls)
-            a(href='#')= nav.name
+    +source('Navbar')
+      nav.navbar
+        ul
+          each nav in navbar
+            li(class=nav.cls)
+              a(href='#')= nav.name
+
     h3 Navbar Examples
     hr
 
     //- @todo: Navbar Fullwidth не работает
-    h2 Navbar Fullwidth
-    nav.navbar.nav-fullwidth
-      ul
-        each nav in navbar
-          li(class=nav.cls)
-            a(href='#')= nav.name
+    +source('Navbar Fullwidth')
+      nav.navbar.nav-fullwidth
+        ul
+          each nav in navbar
+            li(class=nav.cls)
+              a(href='#')= nav.name
+
     h3 Navbar Fullwidth Examples
     hr
 
-    h2 Pills
-    nav.navbar.navbar-pills
-      ul
-        each nav in navbar
-          li(class=nav.cls)
-            a(href='#')= nav.name
-    hr
-
-    h2 Left & Right Navbars
-    header.group
-      nav.navbar.navbar-left
+    +source('Pills')
+      nav.navbar.navbar-pills
         ul
           each nav in navbar
             li(class=nav.cls)
               a(href='#')= nav.name
-    hr
+
+    +source('Left & Right Navbars')
+      header.group
+        nav.navbar.navbar-left
+          ul
+            each nav in navbar
+              li(class=nav.cls)
+                a(href='#')= nav.name
+
     //- @bug: .input-search-icon нет иконки
-    h2 Navbar Form
-    header.group
-      nav.navbar.navbar-left
+    +source('Navbar Form')
+      header.group
+        nav.navbar.navbar-left
+          ul
+            each nav in navbar
+              li(class=nav.cls)
+                a(href='#')= nav.name
+        form.right.width-30(action='')
+          input.input-search.input-search-icon.width-100(type='text', placeholder='Search')
+
+
+    +source('Vertical Navigation')
+      nav.nav
         ul
           each nav in navbar
             li(class=nav.cls)
               a(href='#')= nav.name
-      form.right.width-30(action='')
-        input.input-search.input-search-icon.width-100(type='text', placeholder='Search')
-    hr
-
-    h2 Vertical Navigation
-    nav.nav
-      ul
-        each nav in navbar
-          li(class=nav.cls)
-            a(href='#')= nav.name
-    hr
 
     h2 Vertical Navigation with Nested Items
     //- @todo: Сделать пример для Vertical Navigation with Nested Items
     hr
 
-    h2 Stacked
-    nav.nav.nav-stacked
-      ul
-        each nav in navbar
-          li(class=nav.cls)
-            a(href='#')= nav.name
-    hrhr
+    +source('Stacked')
+      nav.nav.nav-stacked
+        ul
+          each nav in navbar
+            li(class=nav.cls)
+              a(href='#')= nav.name
 
-    h2 Stats
-    nav.nav.nav-stats
-      ul
-        each nav in navbar
-          li(class=nav.cls)
-            a(href='#')= nav.name
-            sup= nav.stat
-    hr
-    nav.nav.nav-stats
-      ul
-        each nav in navbar
-          li(class=nav.cls)
-            a(href='#')= nav.name
-            b.badge.badge-small= nav.stat
-    hr
 
-    h2 Tabs
-    nav.nav-tabs
-      ul
-        each nav in navbar
-          li(class=nav.cls)
-            a(href='#')= nav.name
+    +source('Stats')
+      nav.nav.nav-stats
+        ul
+          each nav in navbar
+            li(class=nav.cls)
+              a(href='#')= nav.name
+              sup= nav.stat
+
+    +source('Stats badge')
+      nav.nav.nav-stats
+        ul
+          each nav in navbar
+            li(class=nav.cls)
+              a(href='#')= nav.name
+              b.badge.badge-small= nav.stat
     hr
 
-    h2 Breadcrumbs
-    nav.breadcrumbs
-      ul
-        each nav in navbar
-          li(class=nav.cls)
-            a(href='#')= nav.name
+    +source('Tabs')
+      nav.nav-tabs
+        ul
+          each nav in navbar
+            li(class=nav.cls)
+              a(href='#')= nav.name
 
-    nav.breadcrumbs.breadcrumbs-path
-      ul
-        each nav in navbar
-          li(class=nav.cls)
-            a(href='#')= nav.name
-    hr
 
-    h2 Pagination
+    +source('Breadcrumbs')
+      nav.breadcrumbs
+        ul
+          each nav in navbar
+            li(class=nav.cls)
+              a(href='#')= nav.name
 
-    ul.pagination
-      li
-        a(href='#') &larr;
-      each page in [1,2,3,4]
+    +source('Breadcrumbs path')
+      nav.breadcrumbs.breadcrumbs-path
+        ul
+          each nav in navbar
+            li(class=nav.cls)
+              a(href='#')= nav.name
+
+
+    +source('Pagination')
+      ul.pagination
         li
-          a(href='#')= page
-      li
-        span 5
-      li
-        a(href='#') &rarr;
-    ul.pagination
-      li
-        a(href='#') &larr;
-      li
-        span 2 of 10
-      li
-        a(href='#') &rarr;
-    hr
+          a(href='#') &larr;
+        each page in [1,2,3,4]
+          li
+            a(href='#')= page
+        li
+          span 5
+        li
+          a(href='#') &rarr;
+
+    +source('Pagination 1')
+      ul.pagination
+        li
+          a(href='#') &larr;
+        li
+          span 2 of 10
+        li
+          a(href='#') &rarr;
+

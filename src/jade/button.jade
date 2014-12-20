@@ -1,22 +1,25 @@
+include mixin/source
+
 extends ./index.jade
+
 mixin buttons(extend)
-  h3= extend
-  button.btn(class='btn-#{extend}') Button
-  button.btn.btn-disabled(class='btn-#{extend}') Disabled
-  button.btn.btn-active(class='btn-#{extend}') Active
-  button.btn.btn-outline(class='btn-#{extend}') Outline
-  button.btn.btn-disabled.btn-outline(class='btn-#{extend}') Disabled
-  button.btn.btn-active.btn-outline(class='btn-#{extend}') Active
-  hr
+  +source(extend)
+    button.btn(class='btn-#{extend}') Button
+    button.btn.btn-disabled(class='btn-#{extend}') Disabled
+    button.btn.btn-active(class='btn-#{extend}') Active
+    button.btn.btn-outline(class='btn-#{extend}') Outline
+    button.btn.btn-disabled.btn-outline(class='btn-#{extend}') Disabled
+    button.btn.btn-active.btn-outline(class='btn-#{extend}') Active
+
 
 block content
   #Buttons
     h1 Buttons
 
-    h2 Default Buttons
-    a.btn(href='#') Link
-    button.btn Button
-    input.btn(type='submit', value='Submit')
+    +source('Default Buttons')
+      a.btn(href='#') Link
+      button.btn Button
+      input.btn(type='submit', value='Submit')
 
     hr
     h3 normal
@@ -28,80 +31,79 @@ block content
     +buttons('green')
     +buttons('white')
 
-    h2 Padding in Forms
-    //- @bug: Padding in Forms
-    form.forms(action='#')
-      input(type='text', placeholder='Input')
-      a.btn(href='#') Link
-      button.btn Button
-      input.btn(type='submit', value='Submit')
+    +source(' Padding in Forms')
+      //- @bug: Padding in Forms
+      form.forms(action='#')
+        input(type='text', placeholder='Input')
+        a.btn(href='#') Link
+        button.btn Button
+        input.btn(type='submit', value='Submit')
 
-    hr
 
-    h2 Active & Disabled buttons
-    button.btn.btn-active Active
-    button.btn.btn(disabled='true') Disabled
-    button.btn.btn-disabled Disabled
-    hr
+    +source(' Active & Disabled buttons')
+      button.btn.btn-active Active
+      button.btn.btn(disabled='true') Disabled
+      button.btn.btn-disabled Disabled
+
 
     h2 Big Buttons
-    +buttons('big')
-    hr
+      +buttons('big')
 
     h2 Small Buttons
-    +buttons('small')
-    hr
+      +buttons('small')
+
 
     h2 Smaller Buttons
-    +buttons('small-super')
-    +buttons('smaller btn-outline')
-    hr
+      +buttons('small-super')
+      +buttons('smaller btn-outline')
 
-    h2 Buttons Width
-    button.btn.width-100 Button 100%
-    button.btn.width-50 Button 50%
-    hr
 
-    h2 Append Button
-    form.forms(action='')
-      .input-groups
-        input(type='text', name='go', placeholder='Search')
-        span.btn-append
-          button.btn.btn-blue Search
-    hr
+    +source(' Buttons Width')
+      button.btn.width-100 Button 100%
+      button.btn.width-50 Button 50%
 
-    h2 Bold Button
-    button.btn.btn-outline.btn-black.bold Outline
-    button.btn.bold Button
-    button.btn.btn-blue.bold Blue
-    hr
+    +source(' Append Button')
+      form.forms(action='')
+        .input-groups
+          input(type='text', name='go', placeholder='Search')
+          span.btn-append
+            button.btn.btn-blue Search
 
-    h2 Round Button
-    button.btn.btn-round Button
-    button.btn.btn-big.btn-round Big
-    button.btn.btn-small.btn-round Small
-    button.btn.btn-smaller.btn-round Smaller
-    button.btn.btn-blue.btn-round Blue
-    button.btn.btn-outline.btn-black.btn-round Outline
-    button.btn.btn-outline.btn-black.bold.btn-round Outline
-    hr
 
-    h2 Buttons Group
-    span.btn-group
-      button.btn 1
-      button.btn.btn-active 2
-      button.btn 3
-    hr
-    span.btn-group
-      button.btn.btn-outline.btn-blue 1
-      button.btn.btn-outline.btn-blue 2
-      button.btn.btn-outline.btn-blue 3
-    hr
-    span.btn-group
-      button.btn.btn-small 1
-      button.btn.btn-small.btn-blue 2
-      button.btn.btn-small 3
+    +source(' Bold Button')
+      button.btn.btn-outline.btn-black.bold Outline
+      button.btn.bold Button
+      button.btn.btn-blue.bold Blue
 
-    span.btn-single
-      button.btn.btn-small.btn-red 4
-    hr
+
+    +source(' Round Button')
+      button.btn.btn-round Button
+      button.btn.btn-big.btn-round Big
+      button.btn.btn-small.btn-round Small
+      button.btn.btn-smaller.btn-round Smaller
+      button.btn.btn-blue.btn-round Blue
+      button.btn.btn-outline.btn-black.btn-round Outline
+      button.btn.btn-outline.btn-black.bold.btn-round Outline
+
+
+    +source(' Buttons Group')
+      span.btn-group
+        button.btn 1
+        button.btn.btn-active 2
+        button.btn 3
+
+    +source(' Buttons Group blue')
+      span.btn-group
+        button.btn.btn-outline.btn-blue 1
+        button.btn.btn-outline.btn-blue 2
+        button.btn.btn-outline.btn-blue 3
+
+    +source(' Buttons Group small')
+      span.btn-group
+        button.btn.btn-small 1
+        button.btn.btn-small.btn-blue 2
+        button.btn.btn-small 3
+
+      span.btn-single
+        button.btn.btn-small.btn-red 4
+

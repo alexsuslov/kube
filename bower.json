@@ -2,6 +2,9 @@
   "name": "wc-rube",
   "private": true,
   "dependencies": {
-    "jquery": "~1.11.1"
+    "jquery": "~1.11.1",
+    "prettyPrint": "*",
+    "SyntaxHighlighter": "~3.0.83",
+    "xregexp": "~2.0.0"
   }
 }
