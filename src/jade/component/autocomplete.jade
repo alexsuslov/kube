@@ -1,0 +1,20 @@
+include ../mixin/source
+
+extends ../index.jade
+
+block Nav
+  +NavBar('Javascript Tools')
+
+block leftNav
+  +leftNavComponent('Autocomplete')
+
+block content
+  //- Test autocomplete
+  h1 Autocomplete
+  +source('autocomplete')
+    input(
+      type="text"
+      name="q"
+      data-tools="autocomplete"
+      data-url="/autocomplete.json"
+      )

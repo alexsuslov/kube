@@ -1,5 +1,14 @@
+###
+   @@@     @@@@@@   @@@@@@   @@@@@@@  @@@@@@@@  @@@@@@@@
+  @@ @@   @@    @@ @@    @@ @@     @@ @@     @@ @@     @@
+ @@   @@  @@       @@       @@     @@ @@     @@ @@     @@
+@@     @@ @@       @@       @@     @@ @@@@@@@@  @@     @@
+@@@@@@@@@ @@       @@       @@     @@ @@   @@   @@     @@
+@@     @@ @@    @@ @@    @@ @@     @@ @@    @@  @@     @@
+@@     @@  @@@@@@   @@@@@@   @@@@@@@  @@     @@ @@@@@@@@  ion
+###
+
 define ['jquery'],($)->
-  #
   class Accordion
     NAME    :  "accordion"
     VERSION :  "1.0"
@@ -144,12 +153,4 @@ define ['jquery'],($)->
         scrollTop: $(id).offset().top - 50
       , 500
       @
-  # Расширение jQuery accordion
-  $.fn.accordion = (options) ->
-    @each ->
-      new Accordion(options, @)
 
-  # Запустить accordion для data-tools='accordion'
-  $("[data-tools='accordion']").accordion()
-
-  Accordion

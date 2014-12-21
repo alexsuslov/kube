@@ -318,7 +318,13 @@ module.exports = (grunt) ->
             dest: "<%= config.dist %>/.htaccess"
           }
         ]
-
+      json:
+        files:[
+          {
+            src:'app/scripts/autocomplete.json'
+            dest:'.tmp/autocomplete.json'
+          }
+        ]
       styles:
         expand: true
         dot: true
