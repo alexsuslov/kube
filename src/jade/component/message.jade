@@ -1,0 +1,39 @@
+include ../mixin/source
+
+extends ../index.jade
+
+block Nav
+  +NavBar('Javascript Tools')
+
+block leftNav
+  +leftNavComponent('Message')
+
+block content
+  //- Test message
+  +source('message blue')
+    button(
+      onclick="$('#message-1').message();"
+      class="btn btn-blue") Show Message
+
+    #message-1.tools-message.tools-message-blue
+      | Bender! Ship! Stop bickering or I'm going to come back there and change your
+      | opinions manually! Take me to your leader!
+
+  +source('message')
+    button(
+      onclick="$('#message-2').message();"
+      class="btn") Show Message
+
+    #message-2.tools-message
+      | Bender! Ship! Stop bickering or I'm going to come back there and change your
+      | opinions manually! Take me to your leader!
+
+  +source('message red')
+    button.btn.btn-red(
+      onclick="$('#message-3').message();"
+      ) Show Message
+
+    #message-3.tools-message.tools-message-red
+      | Bender! Ship! Stop bickering or I'm going to come back there and change your
+      | opinions manually! Take me to your leader!
+

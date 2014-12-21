@@ -9,13 +9,17 @@ require.config
     accordion: 'helpers/accordion'
     autocomplete: 'helpers/autocomplete'
 
+    message: 'helpers/message'
+    view: 'helpers/view'
+
 require [
   'jquery'
   'async'
   'wcHelper'
   'accordion'
   'autocomplete'
-  ],($, async, wcHelper, Accordion, Autocomplete)->
+  'message'
+  ],($, async, wcHelper, Accordion, Autocomplete, Message)->
 
   #############
   # wcHelper  #
@@ -48,6 +52,16 @@ require [
 
   # Запустить autocomplete для data-tools='autocomplete'
   $("[data-tools='autocomplete']").autocomplete()
+
+
+  ################
+  # Message      #
+  ################
+  $.fn.message = (options) ->
+    @each ->
+      new Message(options, @)
+  $("[data-tools='message']").message()
+
 
   #############
   # wcDo      #

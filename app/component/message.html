@@ -35,10 +35,31 @@
         </nav>
       </div>
       <div class="unit-70">
-        <h1>Autocomplete</h1>
-        <h2>autocomplete</h2>
+        <h2>message blue</h2>
         <div class="wc-help">
-          <input type="text" name="q" data-tools="autocomplete" data-url="/autocomplete.json">
+          <button onclick="$('#message-1').message();" class="btn btn-blue">Show Message</button>
+          <div id="message-1" class="tools-message tools-message-blue">
+            Bender! Ship! Stop bickering or I'm going to come back there and change your
+            opinions manually! Take me to your leader!
+          </div>
+        </div>
+        <hr/>
+        <h2>message</h2>
+        <div class="wc-help">
+          <button onclick="$('#message-2').message();" class="btn">Show Message</button>
+          <div id="message-2" class="tools-message">
+            Bender! Ship! Stop bickering or I'm going to come back there and change your
+            opinions manually! Take me to your leader!
+          </div>
+        </div>
+        <hr/>
+        <h2>message red</h2>
+        <div class="wc-help">
+          <button onclick="$('#message-3').message();" class="btn btn-red">Show Message</button>
+          <div id="message-3" class="tools-message tools-message-red">
+            Bender! Ship! Stop bickering or I'm going to come back there and change your
+            opinions manually! Take me to your leader!
+          </div>
         </div>
         <hr/>
       </div>

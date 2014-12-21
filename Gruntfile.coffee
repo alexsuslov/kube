@@ -364,6 +364,7 @@ module.exports = (grunt) ->
       "autoprefixer"
       "connect:livereload"
       "less"
+      "copy:json"
       "watch"
     ]
     return
