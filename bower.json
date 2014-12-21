@@ -3,8 +3,8 @@
   "private": true,
   "dependencies": {
     "jquery": "~1.11.1",
-    "prettyPrint": "*",
-    "SyntaxHighlighter": "~3.0.83",
-    "xregexp": "~2.0.0"
+    "requirejs": "~2.1.15",
+    "fontawesome": "~4.2.0",
+    "async": "~0.9.2"
   }
 }

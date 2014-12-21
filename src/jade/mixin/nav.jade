@@ -1,6 +1,13 @@
-mixin mainMav()
-  - var main =[{name:'css', href:'css'}];
-  - main.push({name:'js', href:'js'});
+mixin NavBar(name)
+  - var main =[{name:'CSS Components', href:'index'}];
+  - main.push({name:'Javascript Tools', href:'component/accordion'});
+  nav.nav-tabs
+    ul
+      each nav in main
+        - var cls = '';
+        - if (nav.name == name) cls = 'active';
+        li(class=cls)
+          a(href='/#{nav.href}.html')= nav.name
 
 mixin leftNav(name)
   - var pages =[{name:'Typography', href:'index'}];
@@ -23,4 +30,13 @@ mixin leftNav(name)
     ul
       each page in pages
         li
-          a(href='#{page.href}.html')= page.name
+          a(href='/#{page.href}.html')= page.name
+
+mixin leftNavComponent(name)
+  - var pages =[{name:'Accordion', href:'accordion'}];
+  - var pages =[{name:'Accordion', href:'accordion'}];
+  nav.nav.nav-stacked
+    ul
+      each page in pages
+        li
+          a(href='/component/#{page.href}.html')= page.name

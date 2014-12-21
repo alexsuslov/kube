@@ -1,57 +1,40 @@
-#
-#	Accordion Tool
-#
-#	http://imperavi.com/kube/
-#
-#	Copyright (c) 2009-2014, Imperavi LLC.
-#
-(($) ->
+define ['jquery'],($)->
+  #
+  class Accordion
+    NAME    :  "accordion"
+    VERSION :  "1.0"
+    opts:
+      scroll: false
+      collapse: true
+      toggle: true
+      titleClass: ".accordion-title"
+      panelClass: ".accordion-panel"
 
-  # Plugin
+    # Инициализация
+    # @param options[object]
+    # @param el[] j,]trn
+    constructor:(@options, @el )->
+      @$el = $ @el if @el
 
-  # Initialization
-  Accordion = (el, options) ->
-    new Accordion::init(el, options)
-
-  $.fn.accordion = (options) ->
-    @each ->
-      $.data this, "accordion", {}
-      $.data this, "accordion", Accordion(this, options)
-      return
-
-
-  $.Accordion = Accordion
-  $.Accordion.NAME = "accordion"
-  $.Accordion.VERSION = "1.0"
-  $.Accordion.opts =
-    scroll: false
-    collapse: true
-    toggle: true
-    titleClass: ".accordion-title"
-    panelClass: ".accordion-panel"
-
-
-  # Functionality
-  Accordion.fn = $.Accordion:: =
-
-    # Initialization
-    init: (el, options) ->
-      @$element = (if el isnt false then $(el) else false)
-      @loadOptions options
+      @loadOptions()
       @build()
+
       if @opts.collapse
         @closeAll()
       else
         @openAll()
       @loadFromHash()
-      return
 
-    loadOptions: (options) ->
-      @opts = $.extend({}, $.extend(true, {}, $.Accordion.opts), @$element.data(), options)
-      return
+      @
+
+    # Загрузка параметров
+    loadOptions: () ->
+      @opts = $.extend({}, $.extend(true, {}, @opts), @$el.data(), @options)
+      @
+
 
     setCallback: (type, e, data) ->
-      events = $._data(@$element[0], "events")
+      events = $._data(@$el[0], "events")
       if events and typeof events[type] isnt "undefined"
         value = []
         len = events[type].length
@@ -69,33 +52,33 @@
           return value
       (if (typeof data is "undefined") then e else data)
 
+      @
+
     getTitles: ->
-      @titles = @$element.find(@opts.titleClass)
+      @titles = @$el.find(@opts.titleClass)
       @titles.append $("<span />").addClass("accordion-toggle")
       @titles.each ->
         $el = $(this)
         $el.attr "rel", $el.attr("href")
-        return
-
-      return
+      @
 
     getPanels: ->
-      @panels = @$element.find(@opts.panelClass)
-      return
+      @panels = @$el.find(@opts.panelClass)
+      @
 
     build: ->
       @getTitles()
       @getPanels()
-      @titles.on "click", $.proxy(@toggle, this)
-      return
+      @titles.on "click", $.proxy(@toggle, @)
+      @
 
     loadFromHash: ->
       return  if top.location.hash is ""
       return  unless @opts.scroll
-      return  if @$element.find("[rel=" + top.location.hash + "]").size() is 0
+      return  if @$el.find("[rel=" + top.location.hash + "]").size() is 0
       @open top.location.hash
       @scrollTo top.location.hash
-      return
+      @
 
     toggle: (e) ->
       e.preventDefault()
@@ -112,7 +95,7 @@
           @close hash
         else
           @open hash
-      return
+      @
 
     open: (hash) ->
       @$title = $("[rel=" + hash + "]")
@@ -121,7 +104,7 @@
       @setStatus "open"
       @$panel.show()
       @setCallback "opened", @$title, @$panel
-      return
+      @
 
     close: (hash) ->
       @$title = $("[rel=" + hash + "]")
@@ -129,7 +112,7 @@
       @setStatus "close"
       @$panel.hide()
       @setCallback "closed", @$title, @$panel
-      return
+      @
 
     setStatus: (command) ->
       items =
@@ -139,39 +122,34 @@
 
       $.each items, (i, s) ->
         if command is "close"
-          s.removeClass("accordion-" + i + "-opened").addClass "accordion-" + i + "-closed"
+          s.removeClass("accordion-#{i}-opened").addClass "accordion-#{i}-closed"
         else
-          s.removeClass("accordion-" + i + "-closed").addClass "accordion-" + i + "-opened"
-        return
-
-      return
+          s.removeClass("accordion-#{i}-closed").addClass "accordion-#{i}-opened"
+      @
 
     openAll: ->
-      @titles.each $.proxy((i, s) ->
+      @titles.each $.proxy( (i, s) ->
         @open $(s).attr("rel")
-        return
-      , this)
-      return
+      , @)
+      @
 
     closeAll: ->
-      @titles.each $.proxy((i, s) ->
+      @titles.each $.proxy( (i, s) ->
         @close $(s).attr("rel")
-        return
-      , this)
-      return
+      , @)
+      @
 
     scrollTo: (id) ->
       $("html, body").animate
         scrollTop: $(id).offset().top - 50
       , 500
-      return
+      @
+  # Расширение jQuery accordion
+  $.fn.accordion = (options) ->
+    @each ->
+      new Accordion(options, @)
 
-  $(window).on "load.tools.accordion", ->
-    $("[data-tools=\"accordion\"]").accordion()
-    return
+  # Запустить accordion для data-tools='accordion'
+  $("[data-tools='accordion']").accordion()
 
-
-  # constructor
-  Accordion::init:: = Accordion::
-  return
-) jQuery
+  Accordion

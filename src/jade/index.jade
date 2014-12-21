@@ -11,18 +11,19 @@ html.no-js
     // Place favicon.ico and apple-touch-icon.png in the root directory
     // build:css(.) styles/vendor.css
     // bower:css
-    link(rel='stylesheet', href='bower_components/fontawesome/css/font-awesome.css')
+    link(rel='stylesheet', href='/bower_components/fontawesome/css/font-awesome.css')
     // endbower
     // endbuild
     // build:css(.tmp) styles/main.css
-    link(rel='stylesheet', href='styles/wc-kube.css')
-    link(rel='stylesheet', href='styles/main.css')
-    link(href="bower_components/SyntaxHighlighter/styles/shCore.css",rel="stylesheet",type="text/css")
+    link(rel='stylesheet', href='/styles/wc-robe.css')
+    link(rel='stylesheet', href='/styles/main.css')
     // endbuild
   body
+    block Nav
+      +NavBar('Css')
     .units-row
       .unit-30
-        block nav
+        block leftNav
           +leftNav()
       .unit-70
         block content
@@ -30,17 +31,14 @@ html.no-js
 
     // build:js(.) scripts/vendor.js
     // bower:js
-    script(src='bower_components/jquery/dist/jquery.js')
     // endbower
     // endbuild
-    script(src='bower_components/xregexp/min/xregexp-min.js')
-    script(src='bower_components/SyntaxHighlighter/scripts/shCore.js')
-    script(src='bower_components/SyntaxHighlighter/scripts/shBrushXml.js')
-
-
-    // Google Analytics: change UA-XXXXX-X to be your site's ID.
     // build:js({app,.tmp}) scripts/main.js
-    script(src='scripts/main.js')
+    //- script(src='scripts/main.js')
+    script(
+        data-main = '/scripts/main',
+        src = '/bower_components/requirejs/require.js'
+        )
     // endbuild
 
 

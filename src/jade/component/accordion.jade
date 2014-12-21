@@ -1,0 +1,70 @@
+include ../mixin/source
+
+extends ../index.jade
+
+block Nav
+  +NavBar('Javascript Tools')
+
+block leftNav
+  +leftNavComponent('Аccordion')
+
+block content
+  //- Test accordion
+  - var text =['\n   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do '];
+  - text.push('eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ');
+  - text.push('enim ad minim veniam quis nostrud exercitation ullamco laboris ');
+  - text.push('nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor ');
+  - text.push('in reprehenderit in voluptate velit essecillum dolore eu fugiat ');
+  - text.push('nulla pariatur. Excepteur sint occaecat cupidatat non proident, ');
+  - text.push('sunt in culpa qui officia deserunt mollit anim id est laborum. \n');
+  - text = text.join('\n')
+  h1 Accordion
+  +source('data-tools init')
+    #accordion1(data-tools='accordion', data-scroll='true')
+      a.accordion-title.accordion-title-closed(href='#panel1', rel='#panel1')
+        | Item 1
+        span.accordion-toggle.accordion-toggle-closed
+      #panel1.accordion-panel.accordion-panel-closed
+        p= text
+
+      a.accordion-title.accordion-title-closed(href='#panel2', rel='#panel2')
+        | Item 2
+        span.accordion-toggle.accordion-toggle-closed
+      #panel2.accordion-panel.accordion-panel-closed
+        p= text
+
+      a.accordion-title.accordion-title-opened(href='#panel3', rel='#panel3')
+        | Item 3
+        span.accordion-toggle.accordion-toggle-opened
+      #panel3.accordion-panel.accordion-panel-opened
+        p= text
+        p= text
+  +source('Enable accordion via JavaScript:')
+    #accordion2
+      a.accordion-title.accordion-title-closed(href='#panel4', rel='#panel4')
+        | Item 4
+        span.accordion-toggle.accordion-toggle-closed
+      #panel4.accordion-panel.accordion-panel-closed= text
+
+      a.accordion-title.accordion-title-closed(href='#panel5', rel='#panel5')
+        | Item 5
+        span.accordion-toggle.accordion-toggle-closed
+      #panel5.accordion-panel.accordion-panel-closed(style='display: none;')
+        p= text
+
+
+      a.accordion-title.accordion-title-closed(href='#panel6', rel='#panel6')
+        | Item 6
+        span.accordion-toggle.accordion-toggle-closed
+
+      #panel6.accordion-panel.accordion-panel-closed(style='display: none;')
+        p= text
+        p= text
+    script.
+      if (!window.wcDo) window.wcDo = [];
+      window.wcDo.push(
+        function(cf){
+          $('#accordion2').accordion();
+          cf(null);
+        }
+      );

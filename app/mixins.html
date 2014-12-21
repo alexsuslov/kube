@@ -9,34 +9,39 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
     <!-- build:css(.) styles/vendor.css-->
     <!-- bower:css-->
-    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.css">
     <!-- endbower-->
     <!-- endbuild-->
     <!-- build:css(.tmp) styles/main.css-->
-    <link rel="stylesheet" href="styles/wc-kube.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link href="bower_components/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/styles/wc-robe.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <!-- endbuild-->
   </head>
   <body>
+    <nav class="nav-tabs">
+      <ul>
+        <li><a href="/index.html">CSS Components</a></li>
+        <li><a href="/component/accordion.html">Javascript Tools</a></li>
+      </ul>
+    </nav>
     <div class="units-row">
       <div class="unit-30">
         <nav class="nav nav-stacked">
           <ul>
-            <li><a href="index.html">Typography</a></li>
-            <li><a href="navigation.html">Навигация</a></li>
-            <li><a href="grids.html">Grid</a></li>
-            <li><a href="blocks.html">Блоки</a></li>
-            <li><a href="table.html">Таблицы</a></li>
-            <li><a href="form.html">Формы</a></li>
-            <li><a href="label.html">Label</a></li>
-            <li><a href="button.html">Кнопки</a></li>
-            <li><a href="search.html">Поиск</a></li>
-            <li><a href="notifications.html">Notifications</a></li>
-            <li><a href="colors.html">Colors</a></li>
-            <li><a href="helpers.html">Helpers</a></li>
-            <li><a href="mixins.html">Mixins</a></li>
-            <li><a href="icons.html">Icons</a></li>
+            <li><a href="/index.html">Typography</a></li>
+            <li><a href="/navigation.html">Навигация</a></li>
+            <li><a href="/grids.html">Grid</a></li>
+            <li><a href="/blocks.html">Блоки</a></li>
+            <li><a href="/table.html">Таблицы</a></li>
+            <li><a href="/form.html">Формы</a></li>
+            <li><a href="/label.html">Label</a></li>
+            <li><a href="/button.html">Кнопки</a></li>
+            <li><a href="/search.html">Поиск</a></li>
+            <li><a href="/notifications.html">Notifications</a></li>
+            <li><a href="/colors.html">Colors</a></li>
+            <li><a href="/helpers.html">Helpers</a></li>
+            <li><a href="/mixins.html">Mixins</a></li>
+            <li><a href="/icons.html">Icons</a></li>
           </ul>
         </nav>
       </div>
@@ -50,15 +55,10 @@
     </div>
     <!-- build:js(.) scripts/vendor.js-->
     <!-- bower:js-->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower-->
     <!-- endbuild-->
-    <script src="bower_components/xregexp/min/xregexp-min.js"></script>
-    <script src="bower_components/SyntaxHighlighter/scripts/shCore.js"></script>
-    <script src="bower_components/SyntaxHighlighter/scripts/shBrushXml.js"></script>
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <!-- build:js({app,.tmp}) scripts/main.js-->
-    <script src="scripts/main.js"></script>
+    <script data-main="/scripts/main" src="/bower_components/requirejs/require.js"></script>
     <!-- endbuild-->
     
   </body>

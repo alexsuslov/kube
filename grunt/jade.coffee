@@ -8,5 +8,11 @@ module.exports =
       src: "*.jade"
       dest: "app/"
       ext: ".html"
+    ,
+      expand: true
+      cwd: "src/jade/component"
+      src: "*.jade"
+      dest: "app/component"
+      ext: ".html"
     ]
 
