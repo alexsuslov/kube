@@ -11,6 +11,7 @@ require.config
 
     message: 'helpers/message'
     view: 'helpers/view'
+    buttons: 'helpers/buttons'
 
 require [
   'jquery'
@@ -19,7 +20,8 @@ require [
   'accordion'
   'autocomplete'
   'message'
-  ],($, async, wcHelper, Accordion, Autocomplete, Message)->
+  'buttons'
+  ],($, async, wcHelper, Accordion, Autocomplete, Message, Buttons)->
 
   #############
   # wcHelper  #
@@ -61,6 +63,15 @@ require [
     @each ->
       new Message(options, @)
   $("[data-tools='message']").message()
+
+  ################
+  # Message      #
+  ################
+  $.fn.buttons = (options) ->
+    @each ->
+      new Buttons(options, @)
+
+  $("[data-tools='buttons']").buttons()
 
 
   #############

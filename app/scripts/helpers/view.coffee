@@ -1,7 +1,7 @@
 # View
 define ['jquery'],($)->
   class View
-    constructor:(@opt, @el)->
+    constructor:(@options, @el)->
       @$el = $ @el if @el
       @
 

@@ -1,0 +1,57 @@
+include ../mixin/source
+
+extends ../index.jade
+
+block Nav
+  +NavBar('Javascript Tools')
+
+block leftNav
+  +leftNavComponent('Buttons')
+
+block content
+  //- Test Buttons
+  h1 Buttons
+  +source('Enable Buttons')
+    p.btn-group(data-tools='buttons', data-target='#target')
+      button.btn(value='1') On
+      button.btn(value='0') Off
+    p
+      input#target(type='text', value='0')
+
+  +source('toggle')
+    p
+      button.btn(data-tools='buttons', data-type='toggle', data-target='#target2') Toggle
+    p
+      input#target2(type='text', value='0')
+
+  +source('toggle buttons')
+    p(data-tools='buttons', data-target='#target3')
+      button.btn(value='left') Left
+      button.btn(value='middle') Middle
+      button.btn(value='right') Right
+    p
+      input#target3(type='text', value='middle')
+  +source('Segmented')
+    p(data-tools='buttons', data-type='segmented', data-target='#target4')
+      button.btn(value='left') Left
+      button.btn(value='middle') Middle
+      button.btn(value='right') Right
+      button.btn(value='justify') Justify
+    p
+      input#target4(type='text', value='middle,left', size='50')
+  +source('Enable Buttons via JavaScript:')
+    p#buttons
+      button.btn(value='1') On
+      button.btn(value='0') Off
+    p
+      input#target5(type='text', value='0')
+    script.
+      if (!window.wcDo) window.wcDo = [];
+      window.wcDo.push(
+        function(cf){
+          $('#buttons').buttons({
+             target: '#target5'
+          });
+          cf(null);
+        }
+      );

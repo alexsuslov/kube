@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>wc robe</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
+    <!-- build:css(.) styles/vendor.css-->
+    <!-- bower:css-->
+    <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.css">
+    <!-- endbower-->
+    <!-- endbuild-->
+    <!-- build:css(.tmp) styles/main.css-->
+    <link rel="stylesheet" href="/styles/wc-robe.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- endbuild-->
+  </head>
+  <body>
+    <nav class="nav-tabs">
+      <ul>
+        <li><a href="/index.html">CSS Components</a></li>
+        <li class="active"><a href="/component/accordion.html">Javascript Tools</a></li>
+      </ul>
+    </nav>
+    <div class="units-row">
+      <div class="unit-30">
+        <nav class="nav nav-stacked">
+          <ul>
+            <li><a href="/component/accordion.html">Accordion</a></li>
+            <li><a href="/component/autocomplete.html">Autocomplete</a></li>
+            <li><a href="/component/message.html">Message</a></li>
+            <li><a href="/component/button.html">Buttons</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="unit-70">
+        <h1>Buttons</h1>
+        <h2>Enable Buttons</h2>
+        <div class="wc-help">
+          <p data-tools="buttons" data-target="#target" class="btn-group">
+            <button value="1" class="btn">On</button>
+            <button value="0" class="btn">Off</button>
+          </p>
+          <p>
+            <input id="target" type="text" value="0">
+          </p>
+        </div>
+        <hr/>
+        <h2>toggle</h2>
+        <div class="wc-help">
+          <p>
+            <button data-tools="buttons" data-type="toggle" data-target="#target2" class="btn">Toggle</button>
+          </p>
+          <p>
+            <input id="target2" type="text" value="0">
+          </p>
+        </div>
+        <hr/>
+        <h2>toggle buttons</h2>
+        <div class="wc-help">
+          <p data-tools="buttons" data-target="#target3">
+            <button value="left" class="btn">Left</button>
+            <button value="middle" class="btn">Middle</button>
+            <button value="right" class="btn">Right</button>
+          </p>
+          <p>
+            <input id="target3" type="text" value="middle">
+          </p>
+        </div>
+        <hr/>
+        <h2>Segmented</h2>
+        <div class="wc-help">
+          <p data-tools="buttons" data-type="segmented" data-target="#target4">
+            <button value="left" class="btn">Left</button>
+            <button value="middle" class="btn">Middle</button>
+            <button value="right" class="btn">Right</button>
+            <button value="justify" class="btn">Justify</button>
+          </p>
+          <p>
+            <input id="target4" type="text" value="middle,left" size="50">
+          </p>
+        </div>
+        <hr/>
+        <h2>Enable Buttons via JavaScript:</h2>
+        <div class="wc-help">
+          <p id="buttons">
+            <button value="1" class="btn">On</button>
+            <button value="0" class="btn">Off</button>
+          </p>
+          <p>
+            <input id="target5" type="text" value="0">
+          </p>
+          <script>
+            if (!window.wcDo) window.wcDo = [];
+            window.wcDo.push(
+              function(cf){
+                $('#buttons').buttons({
+                   target: '#target5'
+                });
+                cf(null);
+              }
+            );
+          </script>
+        </div>
+        <hr/>
+      </div>
+    </div>
+    <!-- build:js(.) scripts/vendor.js-->
+    <!-- bower:js-->
+    <!-- endbower-->
+    <!-- endbuild-->
+    <!-- build:js({app,.tmp}) scripts/main.js-->
+    <script data-main="/scripts/main" src="/bower_components/requirejs/require.js"></script>
+    <!-- endbuild-->
+    
+  </body>
+</html>
