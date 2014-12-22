@@ -311,6 +311,9 @@
 
 /* =Pagination
 -----------------------------------------------------------------------------*/
+@pagination-color: @color-black;
+@pagination-background: @color-gray-dark;
+
 .pagination {
 	position: relative;
 	left: -9px;
@@ -328,20 +331,20 @@
 		padding: 7px 9px;
 		line-height: 1;
 		border-radius: 2px;
-		color: @color-black;
+		color: @pagination-color;
 		text-decoration: none;
 	}
 	& span,
 	& li.active a,
 	& li.active a:hover {
 		color: @color-white;
-		background-color: @color-black;
+		background-color: @pagination-background;
 		cursor: text;
 	}
 	& a:focus,
 	& a:hover {
 		text-decoration: none;
-		background-color: @color-black;
+		background-color: @pagination-background;
 		color: #fff;
 	}
 

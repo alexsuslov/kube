@@ -63,29 +63,39 @@
 @font-size-h6-sm: .75em; // 12px
 
 // Colors
+
 @color-gray: #e0e3e5;
 @color-black: #0f0f0f;
-@color-blue: #2575ed;
-@color-red: #de2c3b;
-@color-yellow: #ffc800;
-@color-green: #2c9f42;
+@color-blue: #3498db;
+@color-red: #e74c3c;
+@color-yellow: #f0be63;
+@color-green: #57d379;
 @color-white: #fff;
 
 // Colors Dark
-@color-gray-dark: #b3b6b7;
+// @color-gray-dark: #b3b6b7;
+@color-gray-dark: darken( @color-gray, 20% );
 @color-black-dark: #000;
-@color-blue-dark: #1a52a5;
-@color-red-dark: #b2232f;
-@color-yellow-dark: #cca000;
-@color-green-dark: #237f35;
+@color-blue-dark: darken( @color-blue, 20% );
+@color-red-dark: darken( @color-red, 20% );
+@color-yellow-dark: darken( @color-yellow, 20% );
+@color-green-dark: darken( @color-green, 20% );
 
 // Colors Light
-@color-gray-light: #f0f1f2;
+// @color-gray-light: #f0f1f2;
 @color-black-light: #363738;
-@color-blue-light: #92baf6;
-@color-red-light: #ef969d;
-@color-yellow-light: #ffe480;
-@color-green-light: #96cfa1;
+// @color-blue-light: #92baf6;
+// @color-red-light: #ef969d;
+// @color-yellow-light: #ffe480;
+// @color-green-light: #96cfa1;
+
+
+@color-gray-light  : lighten( @color-gray, 20% );
+@color-black-light : lighten( @color-black, 20% );
+@color-blue-light  : lighten( @color-blue, 20%);
+@color-red-light   : lighten( @color-red, 20%);
+@color-yellow-light: lighten( @color-yellow, 20%);
+@color-green-light : lighten( @color-green, 20%);
 
 // Colors Pastel
 @color-gray-pastel: #f7f8f8;
