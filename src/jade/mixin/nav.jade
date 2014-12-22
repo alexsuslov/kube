@@ -35,8 +35,9 @@ mixin leftNav(name)
 mixin leftNavComponent(name)
   - var pages =[{name:'Accordion', href:'accordion'}];
   - pages.push({name:'Autocomplete', href:'autocomplete'});
-  - pages.push({name:'Message', href:'message'});
   - pages.push({name:'Buttons', href:'button'});
+  - pages.push({name:'Message', href:'message'});
+
   nav.nav.nav-stacked
     ul
       each page in pages

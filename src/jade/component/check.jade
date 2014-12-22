@@ -1,0 +1,14 @@
+include ../mixin/source
+
+extends ../index.jade
+
+block Nav
+  +NavBar('Javascript Tools')
+
+block leftNav
+  +leftNavComponent('Buttons')
+
+block content
+  //- Test Buttons
+  h1 Buttons
+  +source('Enable Buttons')
