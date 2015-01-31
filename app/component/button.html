@@ -18,26 +18,33 @@
     <!-- endbuild-->
   </head>
   <body>
-    <nav class="nav-tabs">
-      <ul>
-        <li><a href="/index.html">CSS Components</a></li>
-        <li class="active"><a href="/component/accordion.html">Javascript Tools</a></li>
-      </ul>
-    </nav>
+    <div class="units-row">
+      <div class="unit-30"><a href="/">
+          <h1 class="text-centered"><sub>
+              <div class="badge badge-blue">wc</div></sub>Robe</h1></a></div>
+      <div class="unit-70">
+            <nav class="nav-tabs">
+              <ul>
+                <li><a href="/typography.html">CSS Components</a></li>
+                <li class="active"><a href="/component/accordion.html">Javascript Tools</a></li>
+              </ul>
+            </nav>
+      </div>
+    </div>
     <div class="units-row">
       <div class="unit-30">
-        <nav class="nav nav-stacked">
-          <ul>
-            <li><a href="/component/accordion.html">Accordion</a></li>
-            <li><a href="/component/autocomplete.html">Autocomplete</a></li>
-            <li><a href="/component/button.html">Buttons</a></li>
-            <li><a href="/component/message.html">Message</a></li>
-          </ul>
-        </nav>
+            <nav class="nav nav-stacked">
+              <ul>
+                <li><a href="/component/accordion.html">Accordion</a></li>
+                <li><a href="/component/autocomplete.html">Autocomplete</a></li>
+                <li class="active"><a href="/component/button.html">Buttons</a></li>
+                <li><a href="/component/message.html">Message</a></li>
+              </ul>
+            </nav>
       </div>
       <div class="unit-70">
         <h1>Buttons</h1>
-        <div class="h2">Enable Buttons</div>
+        <div id="Enable Buttons" class="h2">Enable Buttons</div>
         <div class="wc-help">
           <p data-tools="buttons" data-target="#target" class="btn-group">
             <button value="1" class="btn">On</button>
@@ -48,7 +55,7 @@
           </p>
         </div>
         <hr/>
-        <div class="h2">toggle</div>
+        <div id="toggle" class="h2">toggle</div>
         <div class="wc-help">
           <p>
             <button data-tools="buttons" data-type="toggle" data-target="#target2" class="btn">Toggle</button>
@@ -58,7 +65,7 @@
           </p>
         </div>
         <hr/>
-        <div class="h2">toggle buttons</div>
+        <div id="toggle buttons" class="h2">toggle buttons</div>
         <div class="wc-help">
           <p data-tools="buttons" data-target="#target3">
             <button value="left" class="btn">Left</button>
@@ -70,7 +77,7 @@
           </p>
         </div>
         <hr/>
-        <div class="h2">Segmented</div>
+        <div id="Segmented" class="h2">Segmented</div>
         <div class="wc-help">
           <p data-tools="buttons" data-type="segmented" data-target="#target4">
             <button value="left" class="btn">Left</button>
@@ -83,7 +90,7 @@
           </p>
         </div>
         <hr/>
-        <div class="h2">Enable Buttons via JavaScript:</div>
+        <div id="Enable Buttons via JavaScript:" class="h2">Enable Buttons via JavaScript:</div>
         <div class="wc-help">
           <p id="buttons">
             <button value="1" class="btn">On</button>

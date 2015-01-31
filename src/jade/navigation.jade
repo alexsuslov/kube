@@ -1,5 +1,12 @@
 include mixin/source
 extends ./index.jade
+
+block Nav
+  +NavBar('CSS Components')
+
+block leftNav
+  +leftNav('Навигация')
+
 block content
   //- Test Labels
   #navigation

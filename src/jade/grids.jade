@@ -2,11 +2,17 @@ include mixin/source
 mixin unit(unit)
   div.visualiser(class='unit-#{unit}')= unit+ '%'
 extends ./index.jade
+
+block Nav
+  +NavBar('CSS Components')
+
+block leftNav
+  +leftNav('Grid')
+
 block content
   //- Test Grids
   #Grid
     h0 Grid
-    h2 Start
     +source('Start')
       .units-row
         .unit-50.visualiser Hello world

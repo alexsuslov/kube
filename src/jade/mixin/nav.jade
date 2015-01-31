@@ -1,5 +1,5 @@
 mixin NavBar(name)
-  - var main =[{name:'CSS Components', href:'index'}];
+  - var main =[{name:'CSS Components', href:'typography'}];
   - main.push({name:'Javascript Tools', href:'component/accordion'});
   nav.nav-tabs
     ul
@@ -9,8 +9,11 @@ mixin NavBar(name)
         li(class=cls)
           a(href='/#{nav.href}.html')= nav.name
 
+
+
+
 mixin leftNav(name)
-  - var pages =[{name:'Typography', href:'index'}];
+  - var pages =[{name:'Typography', href:'typography'}];
   - pages.push({name:'Навигация', href:'navigation'});
   - pages.push({name:'Grid', href:'grids'});
   - pages.push({name:'Блоки', href:'blocks'});
@@ -29,7 +32,9 @@ mixin leftNav(name)
   nav.nav.nav-stacked
     ul
       each page in pages
-        li
+        - var cls = '';
+        - if (page.name == name) cls = 'active';
+        li(class=cls)
           a(href='/#{page.href}.html')= page.name
 
 mixin leftNavComponent(name)
@@ -41,5 +46,7 @@ mixin leftNavComponent(name)
   nav.nav.nav-stacked
     ul
       each page in pages
-        li
+        - var cls = '';
+        - if (page.name == name) cls = 'active';
+        li(class=cls)
           a(href='/component/#{page.href}.html')= page.name

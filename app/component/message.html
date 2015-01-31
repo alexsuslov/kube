@@ -18,25 +18,32 @@
     <!-- endbuild-->
   </head>
   <body>
-    <nav class="nav-tabs">
-      <ul>
-        <li><a href="/index.html">CSS Components</a></li>
-        <li class="active"><a href="/component/accordion.html">Javascript Tools</a></li>
-      </ul>
-    </nav>
+    <div class="units-row">
+      <div class="unit-30"><a href="/">
+          <h1 class="text-centered"><sub>
+              <div class="badge badge-blue">wc</div></sub>Robe</h1></a></div>
+      <div class="unit-70">
+            <nav class="nav-tabs">
+              <ul>
+                <li><a href="/typography.html">CSS Components</a></li>
+                <li class="active"><a href="/component/accordion.html">Javascript Tools</a></li>
+              </ul>
+            </nav>
+      </div>
+    </div>
     <div class="units-row">
       <div class="unit-30">
-        <nav class="nav nav-stacked">
-          <ul>
-            <li><a href="/component/accordion.html">Accordion</a></li>
-            <li><a href="/component/autocomplete.html">Autocomplete</a></li>
-            <li><a href="/component/button.html">Buttons</a></li>
-            <li><a href="/component/message.html">Message</a></li>
-          </ul>
-        </nav>
+            <nav class="nav nav-stacked">
+              <ul>
+                <li><a href="/component/accordion.html">Accordion</a></li>
+                <li><a href="/component/autocomplete.html">Autocomplete</a></li>
+                <li><a href="/component/button.html">Buttons</a></li>
+                <li class="active"><a href="/component/message.html">Message</a></li>
+              </ul>
+            </nav>
       </div>
       <div class="unit-70">
-        <div class="h2">message blue</div>
+        <div id="message blue" class="h2">message blue</div>
         <div class="wc-help">
           <button onclick="$('#message-1').message();" class="btn btn-blue">Show Message</button>
           <div id="message-1" class="tools-message tools-message-blue">
@@ -45,7 +52,7 @@
           </div>
         </div>
         <hr/>
-        <div class="h2">message</div>
+        <div id="message" class="h2">message</div>
         <div class="wc-help">
           <button onclick="$('#message-2').message();" class="btn">Show Message</button>
           <div id="message-2" class="tools-message">
@@ -54,7 +61,7 @@
           </div>
         </div>
         <hr/>
-        <div class="h2">message red</div>
+        <div id="message red" class="h2">message red</div>
         <div class="wc-help">
           <button onclick="$('#message-3').message();" class="btn btn-red">Show Message</button>
           <div id="message-3" class="tools-message tools-message-red">

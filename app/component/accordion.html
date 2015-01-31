@@ -18,26 +18,33 @@
     <!-- endbuild-->
   </head>
   <body>
-    <nav class="nav-tabs">
-      <ul>
-        <li><a href="/index.html">CSS Components</a></li>
-        <li class="active"><a href="/component/accordion.html">Javascript Tools</a></li>
-      </ul>
-    </nav>
+    <div class="units-row">
+      <div class="unit-30"><a href="/">
+          <h1 class="text-centered"><sub>
+              <div class="badge badge-blue">wc</div></sub>Robe</h1></a></div>
+      <div class="unit-70">
+            <nav class="nav-tabs">
+              <ul>
+                <li><a href="/typography.html">CSS Components</a></li>
+                <li class="active"><a href="/component/accordion.html">Javascript Tools</a></li>
+              </ul>
+            </nav>
+      </div>
+    </div>
     <div class="units-row">
       <div class="unit-30">
-        <nav class="nav nav-stacked">
-          <ul>
-            <li><a href="/component/accordion.html">Accordion</a></li>
-            <li><a href="/component/autocomplete.html">Autocomplete</a></li>
-            <li><a href="/component/button.html">Buttons</a></li>
-            <li><a href="/component/message.html">Message</a></li>
-          </ul>
-        </nav>
+            <nav class="nav nav-stacked">
+              <ul>
+                <li><a href="/component/accordion.html">Accordion</a></li>
+                <li><a href="/component/autocomplete.html">Autocomplete</a></li>
+                <li><a href="/component/button.html">Buttons</a></li>
+                <li><a href="/component/message.html">Message</a></li>
+              </ul>
+            </nav>
       </div>
       <div class="unit-70">
         <h1>Accordion</h1>
-        <div class="h2">data-tools init</div>
+        <div id="data-tools init" class="h2">data-tools init</div>
         <div class="wc-help">
           <div id="accordion1" data-tools="accordion" data-scroll="true"><a href="#panel1" rel="#panel1" class="accordion-title accordion-title-closed">Item 1<span class="accordion-toggle accordion-toggle-closed"></span></a>
             <div id="panel1" class="accordion-panel accordion-panel-closed">
@@ -85,7 +92,7 @@ sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
         </div>
         <hr/>
-        <div class="h2">Enable accordion via JavaScript:</div>
+        <div id="Enable accordion via JavaScript:" class="h2">Enable accordion via JavaScript:</div>
         <div class="wc-help">
           <div id="accordion2"><a href="#panel4" rel="#panel4" class="accordion-title accordion-title-closed">Item 4<span class="accordion-toggle accordion-toggle-closed"></span></a>
             <div id="panel4" class="accordion-panel accordion-panel-closed">

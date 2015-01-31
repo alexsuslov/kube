@@ -73,6 +73,7 @@ module.exports = (grunt) ->
 
     less: require("./grunt/less")
     jade: require("./grunt/jade")
+    requirejs: require("./grunt/requirejs")
 
     # The actual grunt server settings
     connect:
@@ -391,18 +392,18 @@ module.exports = (grunt) ->
   grunt.registerTask "build", [
     "clean:dist"
     "wiredep"
-    "useminPrepare"
+    # "useminPrepare"
     "concurrent:dist"
-    "autoprefixer"
-    "concat"
-    "less"
-    'jade:serve'
-    "cssmin"
-    "uglify"
-    "copy:dist"
-    "rev"
-    "usemin"
-    "htmlmin"
+    # "autoprefixer"
+    # "concat"
+    "less:dist"
+    'jade:dist'
+    # "cssmin"
+    # "uglify"
+    # "copy:dist"
+    # "rev"
+    # "usemin"
+    # "htmlmin"
   ]
   grunt.registerTask "default", [
     "newer:jshint"

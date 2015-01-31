@@ -6,9 +6,9 @@
 #	Copyright (c) 2009-2014, Imperavi LLC.
 #
 (($) ->
-  
+
   # Plugin
-  
+
   # Initialization
   Autocomplete = (el, options) ->
     new Autocomplete::init(el, options)
@@ -27,10 +27,10 @@
     min: 2
     set: "value" # value or id
 
-  
+
   # Functionality
   Autocomplete.fn = $.Autocomplete:: =
-    
+
     # Initialization
     init: (el, options) ->
       @$element = (if el isnt false then $(el) else false)
@@ -160,7 +160,7 @@
     $("[data-tools=\"autocomplete\"]").autocomplete()
     return
 
-  
+
   # constructor
   Autocomplete::init:: = Autocomplete::
   return

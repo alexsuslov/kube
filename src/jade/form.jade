@@ -6,7 +6,7 @@ block content
   #Form
     h1 Forms
     +source('Форма')
-      form.form(method="post", action="#", class="forms")
+      form.form(method="post", action="#")
         label Email
           input.width-50( type="email", name="user-email")
         label Password
@@ -14,6 +14,7 @@ block content
         p
           button.btn.btn-blue Log in
           button.btn Cancel
+
     +source('Простая форма')
       form.form(method="post", action="#", class="forms")
         label

@@ -1,5 +1,3 @@
-include mixin/nav
-
 doctype html
 html.no-js
   head
@@ -19,15 +17,25 @@ html.no-js
     link(rel='stylesheet', href='/styles/main.css')
     // endbuild
   body
-    block Nav
-      +NavBar('Css')
+    include mixin/nav
+    block header
+      .units-row
+        .unit-30
+          a(href='/')
+            h1.text-centered
+              sub
+                .badge.badge-blue wc
+              | Robe
+        .unit-70
+          block Nav
+            +NavBar('Css')
     .units-row
       .unit-30
         block leftNav
           +leftNav()
       .unit-70
         block content
-          include ./tests/typography
+          include todo/css
 
     // build:js(.) scripts/vendor.js
     // bower:js
